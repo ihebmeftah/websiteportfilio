@@ -11,7 +11,30 @@ const defaultDuration = Duration(seconds: 1); // we use it on our animation
 const maxWidth = 1440.0; // max width of our web
 
 class ThemesApp {
-  static final light = ThemeData();
+  static final light = ThemeData(
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: const AppBarTheme(
+      iconTheme: IconThemeData(color: Colors.black),
+      elevation: 0,
+      backgroundColor: Colors.white,
+      toolbarTextStyle: TextStyle(
+          fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+    ),
+    brightness: Brightness.light,
+  );
 
-  static final dark = ThemeData();
+  static final dark = ThemeData(
+    primaryColor: primaryColor,
+    canvasColor: bgColor,
+    textTheme: const TextTheme(
+        bodyText1: TextStyle(color: bodyTextColor),
+        bodyText2: TextStyle(color: bodyTextColor)),
+    scaffoldBackgroundColor: bgColor,
+    appBarTheme: const AppBarTheme(
+        backgroundColor: bgColor,
+        elevation: 0,
+        toolbarTextStyle: TextStyle(
+            fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+    brightness: Brightness.dark,
+  );
 }
