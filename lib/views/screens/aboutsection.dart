@@ -6,7 +6,7 @@ import 'package:websiteportfilio/views/screens/widgets/personalinfo.dart';
 import 'package:websiteportfilio/views/screens/widgets/skills.dart';
 import 'package:websiteportfilio/views/theme/theme.dart';
 
-Widget leftSide({required BuildContext? context}) => Drawer(
+Widget aboutSection({required BuildContext? context}) => Drawer(
       child: Column(
         children: [
           info(context),
