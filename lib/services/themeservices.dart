@@ -10,9 +10,9 @@ class ThemeServices {
 
   bool isDark() => _box.read<bool>(_key) ?? false;
 
-  ThemeMode get theme => isDark() ? ThemeMode.dark : ThemeMode.light;
+  ThemeMode get theme => isDark() ? ThemeMode.light : ThemeMode.dark;
   void switchTheme() {
-    Get.changeThemeMode(isDark() ? ThemeMode.light : ThemeMode.dark);
+    Get.changeThemeMode(isDark() ? ThemeMode.dark : ThemeMode.light);
     _savethemetobox(!isDark());
   }
 }

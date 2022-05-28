@@ -1,20 +1,20 @@
 import 'package:get/get.dart';
 
-import '../views/screens/homescreen.dart';
+import '../views/screens/homepage.dart';
 
 class Approutes {
   //initialRoute
-  static const home = Routes.home;
+  static const homepage= Routes.homepage;
 
   //getPages
   static final routes = [
     GetPage(
-      name: Routes.home,
-      page: () => const Home(),
+      name: Routes.homepage,
+      page: () => const Homepage(),
     ),
   ];
 }
 
 class Routes {
-  static const home = '/home';
+  static const homepage = '/AboutSection';
 }

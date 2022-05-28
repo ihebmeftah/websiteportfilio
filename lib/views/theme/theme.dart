@@ -24,13 +24,17 @@ class ThemesApp {
   );
 
   static final dark = ThemeData(
+    iconTheme: const IconThemeData(color: Colors.white),
     primaryColor: primaryColor,
     canvasColor: bgColor,
     textTheme: const TextTheme(
         bodyText1: TextStyle(color: bodyTextColor),
         bodyText2: TextStyle(color: bodyTextColor)),
     scaffoldBackgroundColor: bgColor,
+    floatingActionButtonTheme:
+        const FloatingActionButtonThemeData(backgroundColor: primaryColor),
     appBarTheme: const AppBarTheme(
+        iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: bgColor,
         elevation: 0,
         toolbarTextStyle: TextStyle(

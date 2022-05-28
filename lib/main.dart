@@ -17,13 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Iheb meftah',
       debugShowCheckedModeBanner: false,
       theme: ThemesApp.light,
       darkTheme: ThemesApp.dark,
       themeMode: ThemeServices().theme,
       getPages: Approutes.routes,
-      initialRoute: Approutes.home,
+      initialRoute: Approutes.homepage,
     );
   }
 }
