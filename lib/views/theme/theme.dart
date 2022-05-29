@@ -24,7 +24,7 @@ class ThemesApp {
   );
 
   static final dark = ThemeData(
-    iconTheme: const IconThemeData(color: Colors.white),
+    iconTheme: const IconThemeData(color: Colors.red),
     primaryColor: primaryColor,
     canvasColor: bgColor,
     textTheme: const TextTheme(
