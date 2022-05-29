@@ -9,6 +9,9 @@ import 'package:websiteportfilio/views/screens/projectsection.dart';
 import 'package:websiteportfilio/views/theme/theme.dart';
 import 'package:http/http.dart' as http;
 
+import '../../controllers/controller.dart';
+import '../../services/themeservices.dart';
+
 // ignore: must_be_immutable
 class Homepage extends StatelessWidget {
   Homepage({Key? key}) : super(key: key);
@@ -21,7 +24,7 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      /* appBar: AppBar(
+      appBar: AppBar(
           leading: GetBuilder<Mycontroller>(
         init: Mycontroller(),
         builder: (controller) {
@@ -32,7 +35,7 @@ class Homepage extends StatelessWidget {
                 ThemeServices().switchTheme();
               });
         },
-      )),*/
+      )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.defaultDialog(
