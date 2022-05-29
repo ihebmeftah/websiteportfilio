@@ -16,7 +16,6 @@ jobs:
         # Build Website
         - name: Build Website
           run: |
-            flutter config --enable-web
             flutter pub get
             flutter build web --release
           working-directory: ./
