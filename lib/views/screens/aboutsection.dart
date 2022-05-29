@@ -12,6 +12,8 @@ Widget aboutSection({required BuildContext? context}) => Drawer(
           info(context),
           Expanded(
             child: SingleChildScrollView(
+              physics: const ScrollPhysics(),
+              controller: ScrollController(),
               padding: const EdgeInsets.all(defaultPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -87,4 +89,3 @@ Widget aboutSection({required BuildContext? context}) => Drawer(
         ],
       ),
     );
-

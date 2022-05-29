@@ -9,8 +9,7 @@ import 'package:websiteportfilio/views/screens/projectsection.dart';
 import 'package:websiteportfilio/views/theme/theme.dart';
 import 'package:http/http.dart' as http;
 
-import '../../controllers/controller.dart';
-import '../../services/themeservices.dart';
+import '../../responsive.dart';
 
 // ignore: must_be_immutable
 class Homepage extends StatelessWidget {
@@ -24,18 +23,10 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      appBar: AppBar(
-          leading: GetBuilder<Mycontroller>(
-        init: Mycontroller(),
-        builder: (controller) {
-          return Switch(
-              value: controller.value,
-              onChanged: (v) {
-                controller.changeSwitcher();
-                ThemeServices().switchTheme();
-              });
-        },
-      )),
+      appBar: Responsive.isMobile(context) ? AppBar() : null,
+      drawer: Visibility(
+          visible: Responsive.isMobile(context),
+          child: aboutSection(context: context)),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.defaultDialog(
@@ -44,7 +35,8 @@ class Homepage extends StatelessWidget {
               content: SizedBox(
                 width: Get.width / 2,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:
+                      EdgeInsets.all(Responsive.isDesktop(context) ? 8.0 : 0),
                   child: Form(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       child: Column(
@@ -90,8 +82,9 @@ class Homepage extends StatelessWidget {
                             height: 10,
                           ),
                           Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 100),
+                            padding: EdgeInsets.symmetric(
+                                horizontal:
+                                    Responsive.isDesktop(context) ? 100 : 0),
                             child: MaterialButton(
                               height: 60,
                               onPressed: () {
@@ -153,9 +146,12 @@ class Homepage extends StatelessWidget {
             child: Container(
               constraints: const BoxConstraints(maxWidth: maxWidth),
               child: Row(children: [
-                Expanded(
-                  flex: 2,
-                  child: aboutSection(context: context),
+                Visibility(
+                  visible: Responsive.isDesktop(context),
+                  child: Expanded(
+                    flex: 2,
+                    child: aboutSection(context: context),
+                  ),
                 ),
                 const SizedBox(
                   width: 10,

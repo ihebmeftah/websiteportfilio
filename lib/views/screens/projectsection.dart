@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:websiteportfilio/models/models.dart';
 import 'dart:js' as js;
 
+import '../../responsive.dart';
 import '../theme/theme.dart';
 
 myProject({BuildContext? context}) =>
@@ -16,25 +17,38 @@ myProject({BuildContext? context}) =>
           children: [
             IconButton(
                 icon: const FaIcon(FontAwesomeIcons.facebook),
-                onPressed: () {}),
+                onPressed: () {
+                  js.context.callMethod(
+                      'open', ["https://www.facebook.com/iheb.meftah.5/"]);
+                }),
             IconButton(
                 icon: const FaIcon(FontAwesomeIcons.instagram),
-                onPressed: () {}),
+                onPressed: () {
+                  js.context.callMethod(
+                      'open', ["https://www.instagram.com/iheb_meftah/?hl=fr"]);
+                }),
             IconButton(
                 icon: const FaIcon(FontAwesomeIcons.linkedin),
-                onPressed: () {}),
+                onPressed: () {
+                  js.context.callMethod('open',
+                      ["https://www.linkedin.com/in/iheb-meftah-7837411b9/"]);
+                }),
             IconButton(
-                icon: const FaIcon(FontAwesomeIcons.github), onPressed: () {}),
+                icon: const FaIcon(FontAwesomeIcons.github),
+                onPressed: () {
+                  js.context.callMethod('open',
+                      ["https://github.com/ihebmeftah?tab=repositories"]);
+                }),
+            const SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),
-      const SizedBox(
-        height: 10,
-      ),
       GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: Responsive.isDesktop(context!) ? 3 : 2,
             childAspectRatio: 1.3,
             crossAxisSpacing: defaultPadding,
             mainAxisSpacing: defaultPadding),
@@ -43,7 +57,8 @@ myProject({BuildContext? context}) =>
         itemBuilder: (BuildContext context, int index) {
           return Container(
             color: secondaryColor,
-            padding: const EdgeInsets.all(defaultPadding),
+            padding: EdgeInsets.all(
+                Responsive.isDesktop(context) ? defaultPadding : 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,23 +67,25 @@ myProject({BuildContext? context}) =>
                   demoprojects[index].title!.toUpperCase(),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle2!
-                      .copyWith(fontSize: 18),
+                  style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                      fontSize: Responsive.isDesktop(context) ? 18 : 10),
                 ),
                 Text(
                   demoprojects[index].description!,
                   maxLines: 4,
-                  style: const TextStyle(height: 1.5),
+                  style: TextStyle(
+                      height: 1.5,
+                      fontSize: Responsive.isDesktop(context) ? 18 : 8),
                 ),
                 TextButton(
                     onPressed: () {
                       js.context
                           .callMethod('open', [demoprojects[index].link!]);
                     },
-                    child: const Text('Code Source ',
-                        style: TextStyle(color: primaryColor, fontSize: 18)))
+                    child: Text('Code Source ',
+                        style: TextStyle(
+                            color: primaryColor,
+                            fontSize: Responsive.isDesktop(context) ? 18 : 8)))
               ],
             ),
           );
