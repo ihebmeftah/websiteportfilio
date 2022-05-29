@@ -99,6 +99,9 @@ class Homepage extends StatelessWidget {
                                       name: namectrl.text,
                                       email: mailctrl.text,
                                       message: msgctrl.text);
+                                  namectrl.text = '';
+                                  mailctrl.text = '';
+                                  msgctrl.text = '';
                                 } else {
                                   Get.snackbar('ERROR', 'Verified Your Fields',
                                       backgroundColor:
