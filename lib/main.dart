@@ -5,9 +5,13 @@ import 'package:websiteportfilio/routes/routes.dart';
 import 'package:websiteportfilio/services/themeservices.dart';
 import 'package:websiteportfilio/views/theme/theme.dart';
 
+import 'loading.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
+  navDelay();
+
   runApp(const MyApp());
 }
 
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemesApp.dark,
       themeMode: ThemeServices().theme,
       getPages: Approutes.routes,
-      initialRoute: Approutes.homepage,
+      initialRoute: Approutes.loading,
     );
   }
 }
