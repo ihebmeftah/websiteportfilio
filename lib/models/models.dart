@@ -14,7 +14,7 @@ List<Project> demoprojects = [
   Project(
       title: "flutter_web-Artist_website",
       description:
-          "First experience in flutter web.I share an website artist  UI build with flutter. Now you can build your website using flutter. This dashboard contains almost everything that you need like a chart, table, nice small card for showing info.",
+          "First experience in flutter web.I share an website artist  UI build with flutter.\nNow you can build your website using flutter.",
       link: "https://github.com/ihebmeftah/flutter_web-Artist_website"),
   Project(
       title: "ToDo-App--GetX-with-sqflite-",
@@ -24,17 +24,17 @@ List<Project> demoprojects = [
   Project(
       title: "LaravelSchoolproject-plateforme-de-redaction-web ",
       description:
-          "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+          "Building of a web writing platform using html, bootstrap and laravel. Discover for the first time backend framework",
       link:
           "https://github.com/ihebmeftah/LaravelSchoolproject-plateforme-de-r-daction-web"),
   Project(
       title: "websiteportfilio",
       description:
-          "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+          "Building portfolio website and app using flutter. We also add animation which works perfectly on mobile and the web.",
       link: "https://github.com/ihebmeftah/websiteportfilio"),
   Project(
       title: "SimpleCalculator_Androidstudio ",
       description:
-          "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+          "Building simple Calculator with android studio using Xml and Java ",
       link: "https://github.com/ihebmeftah/SimpleCalculator_Androidstudio"),
 ];
