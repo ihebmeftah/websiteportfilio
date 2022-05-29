@@ -3,7 +3,7 @@ on: push
 jobs:
     hosting:
       name: Deploy Website
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       steps:
         # Checkout Repository
         - uses: actions/checkout@v1
