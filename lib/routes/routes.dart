@@ -6,6 +6,7 @@ import '../views/screens/homepage.dart';
 class Approutes {
   //initialRoute
   static const loading = Routes.loading;
+  static const homepage = Routes.homepage;
 
   //getPages
   static final routes = [

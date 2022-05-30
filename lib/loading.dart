@@ -20,5 +20,5 @@ class Loading extends StatelessWidget {
 
 Future<void> navDelay() async {
   await Future.delayed(const Duration(seconds: 3));
-  Get.to(Homepage());
+  Get.to(() => Homepage());
 }
