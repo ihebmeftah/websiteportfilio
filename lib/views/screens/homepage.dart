@@ -87,11 +87,12 @@ class Homepage extends StatelessWidget {
                                     Responsive.isDesktop(context) ? 100 : 0),
                             child: MaterialButton(
                               height: 60,
-                              onPressed: () {
+                              onPressed: () async {
                                 if (namectrl.text.isNotEmpty &&
                                     mailctrl.text.isNotEmpty &&
+                                    GetUtils.isEmail(mailctrl.text) &&
                                     msgctrl.text.isNotEmpty) {
-                                  sendEmail(
+                                  await sendEmail(
                                       name: namectrl.text,
                                       email: mailctrl.text,
                                       message: msgctrl.text);
