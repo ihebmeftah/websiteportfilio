@@ -8,7 +8,7 @@ import '../../../core/themes/appthemes.dart';
 import '../controllers/intro_controller.dart';
 
 class IntroView extends GetView<IntroController> {
-  const IntroView({Key? key}) : super(key: key);
+  const IntroView({super.key});
   @override
   Widget build(BuildContext context) {
     return Padding(
