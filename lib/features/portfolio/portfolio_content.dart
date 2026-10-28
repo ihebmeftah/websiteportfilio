@@ -1,4 +1,5 @@
 import 'package:websiteportfilio/l10n/app_localizations.dart';
+import 'package:websiteportfilio/providers/settings_providers.dart';
 
 class ExperienceItem {
   const ExperienceItem({
@@ -47,7 +48,7 @@ abstract final class PortfolioLinks {
   static const phoneText = '+49 155 11063642';
   static const linkedin = 'https://www.linkedin.com/in/ihebmeftah666/';
   static const github = 'https://github.com/ihebmeftah';
-  static const skills = [
+  static const mobileSkills = [
     'Flutter',
     'Dart',
     'Firebase',
@@ -57,8 +58,60 @@ abstract final class PortfolioLinks {
     'REST',
     'NestJS',
     'PostgreSQL',
+    'Java',
+    'System design',
     'CI/CD',
   ];
+
+  static const softwareSkills = [
+    'Java',
+    'System design',
+    'Architecture',
+    'TypeScript',
+    'Dart',
+    'Flutter',
+    'NestJS',
+    'PostgreSQL',
+    'MongoDB',
+    'GraphQL',
+    'REST',
+    'CI/CD',
+  ];
+}
+
+class ProfileCopy {
+  const ProfileCopy({
+    required this.kicker,
+    required this.role,
+    required this.summary,
+    required this.workIntro,
+    required this.contactIntro,
+    required this.availability,
+    required this.skills,
+  });
+
+  final String kicker;
+  final String role;
+  final String summary;
+  final String workIntro;
+  final String contactIntro;
+  final String availability;
+  final List<String> skills;
+}
+
+ProfileCopy profileCopyOf(AppLocalizations l10n, ProfileFocus focus) {
+  final software = focus == ProfileFocus.software;
+  return ProfileCopy(
+    kicker: software ? l10n.heroKickerSoftware : l10n.heroKicker,
+    role: software ? l10n.heroRoleSoftware : l10n.heroRole,
+    summary: software ? l10n.heroSummarySoftware : l10n.heroSummary,
+    workIntro: software ? l10n.workIntroSoftware : l10n.workIntro,
+    contactIntro: software ? l10n.contactIntroSoftware : l10n.contactIntro,
+    availability: software ? l10n.availabilitySoftware : l10n.availability,
+    skills: software
+        ? PortfolioLinks.softwareSkills
+        : PortfolioLinks.mobileSkills,
+  );
 }
 
 List<ExperienceItem> experienceOf(AppLocalizations l10n) {
@@ -87,6 +140,18 @@ List<ExperienceItem> experienceOf(AppLocalizations l10n) {
       dates: l10n.job4Dates,
       body: l10n.job4Body,
     ),
+    ExperienceItem(
+      title: l10n.job5Title,
+      org: l10n.job5Org,
+      dates: l10n.job5Dates,
+      body: l10n.job5Body,
+    ),
+    ExperienceItem(
+      title: l10n.job6Title,
+      org: l10n.job6Org,
+      dates: l10n.job6Dates,
+      body: l10n.job6Body,
+    ),
   ];
 }
 
@@ -107,8 +172,7 @@ List<ProjectItem> projectsOf(AppLocalizations l10n) {
     ProjectItem(
       title: l10n.project3Title,
       body: l10n.project3Body,
-      url:
-          'https://github.com/ihebmeftah/E-commerce-Full-App-Web-Getx---Firebase-Mvc',
+      url: 'https://github.com/ihebmeftah/E-commerce-Full-App-Web-Getx---Firebase-Mvc',
       image: 'assets/images/commerce.jpg',
     ),
     ProjectItem(

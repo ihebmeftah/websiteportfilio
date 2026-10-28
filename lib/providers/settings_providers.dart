@@ -62,10 +62,9 @@ class LocaleController extends Notifier<Locale?> {
   }
 }
 
-final languagePromptProvider =
-    NotifierProvider<LanguagePromptController, bool>(
-      LanguagePromptController.new,
-    );
+final languagePromptProvider = NotifierProvider<LanguagePromptController, bool>(
+  LanguagePromptController.new,
+);
 
 class LanguagePromptController extends Notifier<bool> {
   @override
@@ -77,6 +76,32 @@ class LanguagePromptController extends Notifier<bool> {
     if (ref.read(localeProvider) != null) {
       state = false;
     }
+  }
+}
+
+enum ProfileFocus { mobile, software }
+
+final profileFocusProvider =
+    NotifierProvider<ProfileFocusController, ProfileFocus>(
+      ProfileFocusController.new,
+    );
+
+class ProfileFocusController extends Notifier<ProfileFocus> {
+  static const _key = 'profileFocus';
+
+  @override
+  ProfileFocus build() {
+    final stored = ref.watch(sharedPreferencesProvider).getString(_key);
+    return stored == ProfileFocus.software.name
+        ? ProfileFocus.software
+        : ProfileFocus.mobile;
+  }
+
+  Future<void> setFocus(ProfileFocus focus) async {
+    if (state != focus) {
+      state = focus;
+    }
+    await ref.read(sharedPreferencesProvider).setString(_key, focus.name);
   }
 }
 

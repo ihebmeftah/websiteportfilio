@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:websiteportfilio/core/responsive/breakpoints.dart';
 import 'package:websiteportfilio/core/theme/portfolio_colors.dart';
 import 'package:websiteportfilio/features/portfolio/portfolio_content.dart';
+import 'package:websiteportfilio/features/portfolio/profile_switcher.dart';
 import 'package:websiteportfilio/features/projects/project_card.dart';
 import 'package:websiteportfilio/l10n/app_localizations.dart';
+import 'package:websiteportfilio/providers/settings_providers.dart';
 import 'package:websiteportfilio/shared/widgets/fade_slide_in.dart';
 import 'package:websiteportfilio/shared/widgets/magnetic_surface.dart';
 import 'package:websiteportfilio/shared/widgets/page_frame.dart';
 import 'package:websiteportfilio/shared/widgets/skill_wrap.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
+    final copy = profileCopyOf(l10n, ref.watch(profileFocusProvider));
     final colors = context.portfolioColors;
     final theme = Theme.of(context);
     final wide = Breakpoints.isDesktop(context);
@@ -32,7 +36,7 @@ class HomePage extends StatelessWidget {
     final intro = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        FadeSlideIn(child: _Kicker(label: l10n.heroKicker)),
+        FadeSlideIn(child: _Kicker(label: copy.kicker)),
         const SizedBox(height: 18),
         FadeSlideIn(
           delay: const Duration(milliseconds: 80),
@@ -48,22 +52,35 @@ class HomePage extends StatelessWidget {
         const SizedBox(height: 14),
         FadeSlideIn(
           delay: const Duration(milliseconds: 140),
-          child: Text(
-            l10n.heroRole,
-            style: theme.textTheme.headlineSmall?.copyWith(
-              color: colors.accent,
-              fontSize: wide ? 30 : 22,
+          child: AnimatedSwitcher(
+            duration: const Duration(milliseconds: 220),
+            child: Text(
+              copy.role,
+              key: ValueKey(copy.role),
+              style: theme.textTheme.headlineSmall?.copyWith(
+                color: colors.accent,
+                fontSize: wide ? 30 : 22,
+              ),
             ),
           ),
+        ),
+        const SizedBox(height: 16),
+        const FadeSlideIn(
+          delay: Duration(milliseconds: 180),
+          child: ProfileSwitcher(),
         ),
         const SizedBox(height: 18),
         FadeSlideIn(
           delay: const Duration(milliseconds: 200),
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 560),
-            child: Text(
-              l10n.heroSummary,
-              style: theme.textTheme.bodyLarge?.copyWith(height: 1.6),
+            constraints: const BoxConstraints(maxWidth: 640),
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 220),
+              child: Text(
+                copy.summary,
+                key: ValueKey(copy.summary),
+                style: theme.textTheme.bodyLarge?.copyWith(height: 1.6),
+              ),
             ),
           ),
         ),
@@ -120,10 +137,7 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 36),
             FadeSlideIn(
               delay: const Duration(milliseconds: 380),
-              child: Text(
-                l10n.skillsTitle,
-                style: theme.textTheme.titleLarge,
-              ),
+              child: Text(l10n.skillsTitle, style: theme.textTheme.titleLarge),
             ),
             const SizedBox(height: 12),
             const FadeSlideIn(
@@ -338,7 +352,8 @@ class _Portrait extends StatelessWidget {
                       bottom: 16,
                       child: DecoratedBox(
                         decoration: BoxDecoration(
-                          color: const Color(0xFF1B1730).withValues(alpha: 0.72),
+                          color: const Color(0xFF1B1730)
+                              .withValues(alpha: 0.72),
                           borderRadius: BorderRadius.circular(999),
                         ),
                         child: Padding(

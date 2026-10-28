@@ -43,7 +43,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get languageLabel => 'Sprache';
 
   @override
-  String get heroKicker => 'Mobile Team Lead';
+  String get heroKicker => 'Flutter Lead';
 
   @override
   String get heroName => 'Iheb Meftah';
@@ -53,7 +53,23 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get heroSummary =>
-      'Mobile-Entwickler mit Schwerpunkt Flutter und Dart, wohnhaft in Kirchhain. Seit Juni 2022 Team Lead bei EdTrust für vier Flutter-Anwendungen für Lehrkräfte, Schüler, Eltern und Schulverwaltung. Vertragsprojekte: Inventar mit Offline-Synchronisation und Barcode-Erfassung, eine Lernanwendung mit dem British Council sowie Pannenhilfe mit Karte und Standort.';
+      'Mobile-Entwickler in Deutschland, auf der Suche nach einer neuen Position und einem neuen Beitrag. Ich liefere Flutter-Anwendungen für iOS und Android, von der Funktion bis zum Release, und bringe auch Java und Systemdesign mit. Bei EdTrust habe ich EdTeacher, EdManager, EdStudent und EdParent geleitet.';
+
+  @override
+  String get profileMobile => 'Mobile-Entwickler';
+
+  @override
+  String get profileSoftware => 'Softwareentwickler';
+
+  @override
+  String get heroKickerSoftware => 'Softwareentwickler';
+
+  @override
+  String get heroRoleSoftware => 'Softwareentwickler';
+
+  @override
+  String get heroSummarySoftware =>
+      'Softwareentwickler in Deutschland, auf der Suche nach einer neuen Position und einem neuen Beitrag im Produktteam. Ich entwerfe mobile Produkte und die Dienste dahinter, mit Java, Systemdesign, Flutter und REST. Bei EdTrust habe ich EdTeacher, EdManager, EdStudent und EdParent geleitet.';
 
   @override
   String get ctaWork => 'Werdegang ansehen';
@@ -62,7 +78,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get ctaContact => 'Kontakt aufnehmen';
 
   @override
-  String get location => 'Kirchhain, Deutschland';
+  String get location => 'Deutschland';
 
   @override
   String get locationTitle => 'Ort';
@@ -71,7 +87,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get statSinceValue => '2022';
 
   @override
-  String get statSinceLabel => 'Mobile-Auslieferung bei EdTrust';
+  String get statSinceLabel => 'Vom Praktikum zur Teamleitung bei EdTrust';
 
   @override
   String get statAppsValue => '4';
@@ -83,7 +99,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get statPlaceValue => 'DE';
 
   @override
-  String get statPlaceLabel => 'Wohnhaft in Kirchhain';
+  String get statPlaceLabel => 'Wohnhaft in Deutschland';
 
   @override
   String get sectionWork => 'Werdegang';
@@ -96,7 +112,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get workIntro =>
-      'Produktive Mobile-Arbeit, von Teamleitung bis zu Vertragsprodukten.';
+      'Produktive Mobile-Arbeit, vom Praktikum bei EdTrust über die Teamleitung bis zu Vertragsprodukten.';
+
+  @override
+  String get workIntroSoftware =>
+      'Produktive Softwarearbeit, von Systemdesign und Teamleitung bis zu Vertragsprodukten.';
 
   @override
   String get projectsIntro =>
@@ -105,6 +125,10 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get contactIntro =>
       'Offen für Gespräche zu Mobile- und Produktentwicklung.';
+
+  @override
+  String get contactIntroSoftware =>
+      'Offen für Gespräche zu Softwareentwicklung, inklusive Mobile, Java und Systemdesign.';
 
   @override
   String get educationTitle => 'Ausbildung';
@@ -140,58 +164,88 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get availability =>
-      'Derzeit in Kirchhain. Gerne im Gespräch über Flutter, Produktarchitektur und Teams, die für iOS und Android ausliefern.';
+      'Derzeit in Deutschland. Gerne im Gespräch über Flutter, Produktarchitektur, Java und Teams, die für iOS und Android ausliefern.';
 
   @override
-  String get job1Title => 'Mobile Team Lead';
+  String get availabilitySoftware =>
+      'Derzeit in Deutschland. Gerne im Gespräch über Systemdesign, Java, Flutter und Teams, die für iOS und Android ausliefern.';
+
+  @override
+  String get job1Title => 'Flutter Lead (Vollzeit)';
 
   @override
   String get job1Org => 'EdTrust, Tunis';
 
   @override
-  String get job1Dates => 'Juni 2022 – heute';
+  String get job1Dates => 'Juli 2024 – heute';
 
   @override
   String get job1Body =>
-      'Leitet das mobile Team und die Auslieferung von vier Flutter-Anwendungen für Lehrkräfte, Schüler, Eltern und die Schulverwaltung. Die Arbeit umfasst eine skalierbare Architektur, Firebase, CI/CD-Pipelines und API-Anbindungen, von der Funktion bis zum Release für iOS und Android.';
+      'Flutter Lead in Vollzeit, hybrid. Leitung der Entwicklung und Auslieferung von EdTeacher, EdManager, EdStudent und EdParent. Die Apps nutzen Tausende Lehrkräfte, Schüler, Schulverwalter und Eltern für Kommunikation und Betreuung. Die Arbeit umfasst Systemdesign, eine skalierbare Architektur, Flutter, GetX, Firebase, CI/CD und API-Anbindungen bis zum Release für iOS und Android.';
 
   @override
-  String get job2Title => 'Mobile-Entwickler (Vertrag)';
+  String get job2Title => 'Flutter-Entwickler (Teilzeit)';
 
   @override
-  String get job2Org => 'Invertech';
+  String get job2Org => 'EdTrust, Tunis';
 
   @override
-  String get job2Dates => 'September 2024 – Juli 2026';
+  String get job2Dates => 'September 2022 – Juli 2024';
 
   @override
   String get job2Body =>
-      'Eine Inventar-Anwendung entwickelt, die online und offline nutzbar bleibt. Sie erfasst Barcodes, verfolgt Einsätze in Echtzeit und hält die Daten über REST-APIs, lokale Speicherung und Echtzeitkommunikation synchron.';
+      'Flutter-Entwickler in Teilzeit, remote, an den EdTrust-Anwendungen. Funktionen entwickelt, APIs angebunden und Releases für iOS und Android unterstützt.';
 
   @override
-  String get job3Title => 'Mobile-Entwickler (Vertrag)';
+  String get job3Title => 'Flutter-Praktikant';
 
   @override
-  String get job3Org => 'Azombwe';
+  String get job3Org => 'EdTrust, Tunis';
 
   @override
-  String get job3Dates => 'Januar 2024 – Juni 2024';
+  String get job3Dates => 'Juni 2022 – August 2022';
 
   @override
   String get job3Body =>
-      'Eine Lernanwendung mit interaktiven Quiz zu afrikanischer Kultur entwickelt, gemeinsam mit dem British Council. Die Oberfläche wurde gestaltet und an Firebase sowie REST-APIs angebunden.';
+      'Flutter-Praktikum im mobilen Team. An den Flutter-Anwendungen für Lehrkräfte, Schüler, Eltern und die Schulverwaltung mitgearbeitet.';
 
   @override
-  String get job4Title => 'Mobile-Entwickler (Praktikum)';
+  String get job4Title => 'Mobile-Entwickler (Vertrag)';
 
   @override
-  String get job4Org => 'Rooly';
+  String get job4Org => 'Invertech';
 
   @override
-  String get job4Dates => 'Februar 2023 – August 2023';
+  String get job4Dates => 'September 2024 – Juli 2026';
 
   @override
   String get job4Body =>
+      'Eine Inventar-Anwendung entwickelt, die online und offline nutzbar bleibt. Sie erfasst Barcodes, verfolgt Einsätze in Echtzeit und hält die Daten über REST-APIs, lokale Speicherung und Echtzeitkommunikation synchron.';
+
+  @override
+  String get job5Title => 'Mobile-Entwickler (Vertrag)';
+
+  @override
+  String get job5Org => 'Azombwe';
+
+  @override
+  String get job5Dates => 'Januar 2024 – Juni 2024';
+
+  @override
+  String get job5Body =>
+      'Eine Lernanwendung mit interaktiven Quiz zu afrikanischer Kultur entwickelt, gemeinsam mit dem British Council. Die Oberfläche wurde gestaltet und an Firebase sowie REST-APIs angebunden.';
+
+  @override
+  String get job6Title => 'Mobile-Entwickler (Praktikum)';
+
+  @override
+  String get job6Org => 'Rooly';
+
+  @override
+  String get job6Dates => 'Februar 2023 – August 2023';
+
+  @override
+  String get job6Body =>
       'Funktionen einer Pannenhilfe-App umgesetzt, die Fahrer mit nahe gelegenen Dienstleistern verbindet. Geolokalisierung, Karten, Authentifizierung und die API-Anbindung ermöglichen die Interaktion in Echtzeit.';
 
   @override

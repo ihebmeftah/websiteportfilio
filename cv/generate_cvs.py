@@ -28,7 +28,7 @@ from reportlab.platypus import (
     TableStyle,
 )
 
-ROOT = Path("/Users/maalejahmed/Documents/cv")
+ROOT = Path("/Users/maalejahmed/Desktop/websiteportfilio/cv")
 PHOTO = ROOT / "iheb.jpg"
 FONT = "/System/Library/Fonts/Supplemental/Arial.ttf"
 FONT_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
@@ -65,32 +65,24 @@ def esc(text: str) -> str:
 
 PROFILES = {
     "en_flutter": (
-        "Flutter mobile engineer and team lead in Kirchhain, Germany. Since June 2022 at EdTrust, "
-        "led four Flutter applications for teachers, students, parents, and school administrators. "
-        "Contract work covers inventory with offline sync and barcode scanning, an education app "
-        "with the British Council, and roadside assistance with maps and live location. "
-        "Stack: Dart, Firebase, REST APIs, CI/CD, GetX, BLoC, and Serverpod."
+        "Mobile developer in Germany, looking for a new position and a new way to contribute. "
+        "I ship Flutter applications for iOS and Android, from the first feature through release, "
+        "and I also work with Java and system design. At EdTrust I led EdTeacher, EdManager, EdStudent, and EdParent."
     ),
     "en_general": (
-        "Software engineer in Kirchhain, Germany, with a mobile core and hands-on backend work. "
-        "Since June 2022, led four production applications for teachers, students, parents, and "
-        "school administrators. Ships features against REST and Firebase, including offline sync, "
-        "real-time updates, authentication, and CI/CD. Also works in TypeScript (NestJS, Express, "
-        "Angular, Ionic), PostgreSQL, MongoDB, and Serverpod."
+        "Software engineer in Germany, looking for a new position and a new way to contribute on a product team. "
+        "I design mobile products and the services behind them, with Java, system design, Flutter, and REST. "
+        "At EdTrust I led EdTeacher, EdManager, EdStudent, and EdParent."
     ),
     "de_flutter": (
-        "Mobile-Entwickler mit Schwerpunkt Flutter und Dart, wohnhaft in Kirchhain. Seit Juni 2022 "
-        "Team Lead bei EdTrust für vier Flutter-Anwendungen für Lehrkräfte, Schüler, Eltern und "
-        "Schulverwaltung. Vertragsprojekte: Inventar mit Offline-Synchronisation und Barcode-Erfassung, "
-        "eine Lernanwendung mit dem British Council sowie Pannenhilfe mit Karte und Standort. "
-        "Stack: Dart, Firebase, REST-APIs, CI/CD, GetX, BLoC und Serverpod."
+        "Mobile-Entwickler in Deutschland, auf der Suche nach einer neuen Position und einem neuen Beitrag. "
+        "Ich liefere Flutter-Anwendungen für iOS und Android, von der Funktion bis zum Release, "
+        "und bringe auch Java und Systemdesign mit. Bei EdTrust habe ich EdTeacher, EdManager, EdStudent und EdParent geleitet."
     ),
     "de_general": (
-        "Softwareentwickler in Kirchhain. Schwerpunkt sind mobile Produkte und ihre Anbindung an "
-        "Backend-Dienste. Seit Juni 2022 Team Lead bei EdTrust für vier produktive Anwendungen für "
-        "Lehrkräfte, Schüler, Eltern und Schulverwaltung. Liefert Funktionen über REST und Firebase, "
-        "inklusive Offline-Synchronisation, Echtzeitdaten, Authentifizierung und CI/CD. "
-        "Weitere Praxis: TypeScript (NestJS, Express, Angular, Ionic), PostgreSQL, MongoDB und Serverpod."
+        "Softwareentwickler in Deutschland, auf der Suche nach einer neuen Position und einem neuen Beitrag im Produktteam. "
+        "Ich entwerfe mobile Produkte und die Dienste dahinter, mit Java, Systemdesign, Flutter und REST. "
+        "Bei EdTrust habe ich EdTeacher, EdManager, EdStudent und EdParent geleitet."
     ),
 }
 
@@ -104,14 +96,33 @@ ROLES = {
 JOBS = {
     "en_flutter": [
         {
-            "title": "Mobile Team Lead",
+            "title": "Flutter Lead (Full-time)",
             "org": "EdTrust, Tunis",
-            "dates": "June 2022 – Present",
+            "dates": "July 2024 – Present",
             "text": (
-                "Leads the mobile team and the delivery of four Flutter applications used by teachers, "
-                "students, parents, and school administrators. The work covers a scalable architecture, "
-                "Firebase, CI/CD pipelines, and API integrations, from feature development through release "
-                "on iOS and Android."
+                "Full-time Flutter lead, working hybrid. Led development and deployment of EdTeacher, "
+                "EdManager, EdStudent, and EdParent. These apps are used by thousands of teachers, students, "
+                "administrators, and parents for school communication and monitoring. The work covers system "
+                "design, a scalable architecture, Flutter, GetX, Firebase, CI/CD, and API integrations, "
+                "through release on iOS and Android."
+            ),
+        },
+        {
+            "title": "Flutter Developer (Part-time)",
+            "org": "EdTrust, Tunis",
+            "dates": "September 2022 – July 2024",
+            "text": (
+                "Part-time Flutter developer, working remotely, on the EdTrust applications. Built features, "
+                "connected APIs, and supported releases on iOS and Android."
+            ),
+        },
+        {
+            "title": "Flutter Intern",
+            "org": "EdTrust, Tunis",
+            "dates": "June 2022 – August 2022",
+            "text": (
+                "Flutter developer intern on the mobile team. Contributed to Flutter applications for "
+                "teachers, students, parents, and school administrators."
             ),
         },
         {
@@ -146,13 +157,32 @@ JOBS = {
     ],
     "en_general": [
         {
-            "title": "Mobile Team Lead",
+            "title": "Flutter Lead (Full-time)",
             "org": "EdTrust, Tunis",
-            "dates": "June 2022 – Present",
+            "dates": "July 2024 – Present",
             "text": (
-                "Leads delivery of four production applications used by teachers, students, parents, and "
-                "school administrators. Defined the architecture, connected Firebase and external APIs, "
-                "and set up CI/CD so client features ship reliably against the backend services."
+                "Full-time Flutter lead, working hybrid, for EdTeacher, EdManager, EdStudent, and EdParent. "
+                "These applications are used by thousands of teachers, students, administrators, and parents. "
+                "Owns system design and the application architecture, connects Firebase and external APIs, "
+                "and runs CI/CD so features ship on iOS and Android."
+            ),
+        },
+        {
+            "title": "Flutter Developer (Part-time)",
+            "org": "EdTrust, Tunis",
+            "dates": "September 2022 – July 2024",
+            "text": (
+                "Part-time Flutter developer, working remotely, on the same applications. Shipped features "
+                "against REST and Firebase and supported the architecture used for iOS and Android releases."
+            ),
+        },
+        {
+            "title": "Flutter Intern",
+            "org": "EdTrust, Tunis",
+            "dates": "June 2022 – August 2022",
+            "text": (
+                "Flutter developer intern. Contributed to production applications for teachers, students, "
+                "parents, and school administrators."
             ),
         },
         {
@@ -186,13 +216,33 @@ JOBS = {
     ],
     "de_flutter": [
         {
-            "title": "Mobile Team Lead",
+            "title": "Flutter Lead (Vollzeit)",
             "org": "EdTrust, Tunis",
-            "dates": "Juni 2022 – heute",
+            "dates": "Juli 2024 – heute",
             "text": (
-                "Leitet das mobile Team und die Auslieferung von vier Flutter-Anwendungen für Lehrkräfte, "
-                "Schüler, Eltern und die Schulverwaltung. Die Arbeit umfasst eine skalierbare Architektur, "
-                "Firebase, CI/CD-Pipelines und API-Anbindungen, von der Funktion bis zum Release für iOS und Android."
+                "Flutter Lead in Vollzeit, hybrid. Leitung der Entwicklung und Auslieferung von EdTeacher, "
+                "EdManager, EdStudent und EdParent. Die Apps nutzen Tausende Lehrkräfte, Schüler, "
+                "Schulverwalter und Eltern für Kommunikation und Betreuung. Die Arbeit umfasst Systemdesign, "
+                "eine skalierbare Architektur, Flutter, GetX, Firebase, CI/CD und API-Anbindungen bis zum "
+                "Release für iOS und Android."
+            ),
+        },
+        {
+            "title": "Flutter-Entwickler (Teilzeit)",
+            "org": "EdTrust, Tunis",
+            "dates": "September 2022 – Juli 2024",
+            "text": (
+                "Flutter-Entwickler in Teilzeit, remote, an den EdTrust-Anwendungen. Funktionen entwickelt, "
+                "APIs angebunden und Releases für iOS und Android unterstützt."
+            ),
+        },
+        {
+            "title": "Flutter-Praktikant",
+            "org": "EdTrust, Tunis",
+            "dates": "Juni 2022 – August 2022",
+            "text": (
+                "Flutter-Entwickler im Praktikum im mobilen Team. An Flutter-Anwendungen für Lehrkräfte, "
+                "Schüler, Eltern und die Schulverwaltung mitgearbeitet."
             ),
         },
         {
@@ -227,13 +277,32 @@ JOBS = {
     ],
     "de_general": [
         {
-            "title": "Mobile Team Lead",
+            "title": "Flutter Lead (Vollzeit)",
             "org": "EdTrust, Tunis",
-            "dates": "Juni 2022 – heute",
+            "dates": "Juli 2024 – heute",
             "text": (
-                "Leitet die Auslieferung von vier produktiven Anwendungen für Lehrkräfte, Schüler, Eltern "
-                "und die Schulverwaltung. Architektur definiert, Firebase und externe APIs angebunden und "
-                "CI/CD aufgesetzt, damit Client-Funktionen zuverlässig gegen die Backend-Dienste ausgeliefert werden."
+                "Flutter Lead in Vollzeit, hybrid, für EdTeacher, EdManager, EdStudent und EdParent. Die "
+                "Anwendungen nutzen Tausende Lehrkräfte, Schüler, Schulverwalter und Eltern. Verantwortet "
+                "Systemdesign und die Anwendungsarchitektur, bindet Firebase und externe APIs an und setzt "
+                "CI/CD auf, damit Funktionen für iOS und Android ausgeliefert werden."
+            ),
+        },
+        {
+            "title": "Flutter-Entwickler (Teilzeit)",
+            "org": "EdTrust, Tunis",
+            "dates": "September 2022 – Juli 2024",
+            "text": (
+                "Flutter-Entwickler in Teilzeit, remote, für dieselben Anwendungen. Funktionen über REST und "
+                "Firebase geliefert und die Architektur für Releases auf iOS und Android unterstützt."
+            ),
+        },
+        {
+            "title": "Flutter-Praktikant",
+            "org": "EdTrust, Tunis",
+            "dates": "Juni 2022 – August 2022",
+            "text": (
+                "Flutter-Entwickler im Praktikum. An produktiven Anwendungen für Lehrkräfte, Schüler, "
+                "Eltern und die Schulverwaltung mitgearbeitet."
             ),
         },
         {
@@ -367,10 +436,11 @@ SKILLS = {
         ("Data and APIs", "Firebase, REST APIs, Serverpod, Shelf, Frog, offline synchronization, local storage"),
         ("Product features", "Barcode scanning, geolocation, maps, authentication, real-time updates"),
         ("Engineering", "CI/CD, Git, GitHub, scalable app architecture"),
-        ("Also used", "TypeScript, NestJS, Express, Angular, Ionic, PostgreSQL, MongoDB"),
+        ("Also used", "Java, system design, software architecture, TypeScript, NestJS, Express, Angular, Ionic, PostgreSQL, MongoDB"),
     ],
     "en_general": [
-        ("Languages", "Dart, TypeScript, JavaScript"),
+        ("Languages", "Java, Dart, TypeScript, JavaScript"),
+        ("Architecture", "System design, software architecture, API design"),
         ("Mobile", "Flutter, GetX, BLoC, SwiftUI, Ionic, iOS, Android"),
         ("Backend", "NestJS, Express, Serverpod, Shelf, Frog, REST APIs, GraphQL"),
         ("Data", "PostgreSQL, MongoDB, Firebase, local storage, offline synchronization"),
@@ -381,10 +451,11 @@ SKILLS = {
         ("Daten und APIs", "Firebase, REST-APIs, Serverpod, Shelf, Frog, Offline-Synchronisation, lokale Speicherung"),
         ("Produktfunktionen", "Barcode-Erfassung, Geolokalisierung, Karten, Authentifizierung, Echtzeitdaten"),
         ("Engineering", "CI/CD, Git, GitHub, skalierbare App-Architektur"),
-        ("Weitere Praxis", "TypeScript, NestJS, Express, Angular, Ionic, PostgreSQL, MongoDB"),
+        ("Weitere Praxis", "Java, Systemdesign, Softwarearchitektur, TypeScript, NestJS, Express, Angular, Ionic, PostgreSQL, MongoDB"),
     ],
     "de_general": [
-        ("Sprachen und Plattformen", "Dart, TypeScript, JavaScript, Flutter, Ionic, iOS, Android"),
+        ("Sprachen und Plattformen", "Java, Dart, TypeScript, JavaScript, Flutter, Ionic, iOS, Android"),
+        ("Architektur", "Systemdesign, Softwarearchitektur, API-Design"),
         ("Backend", "NestJS, Express, Serverpod, Shelf, Frog, REST-APIs, GraphQL"),
         ("Daten", "PostgreSQL, MongoDB, Firebase, lokale Speicherung, Offline-Synchronisation"),
         ("Engineering", "CI/CD, Git, GitHub, Authentifizierung, Echtzeitkommunikation, GetX, BLoC"),
@@ -422,7 +493,7 @@ LABELS = {
         "email": "Email",
         "phone": "Phone",
         "location": "Address",
-        "location_value": "Kirchhain, Germany",
+        "location_value": "Germany",
     },
     "en_general": {
         "kind": "europass",
@@ -439,7 +510,7 @@ LABELS = {
         "email": "Email",
         "phone": "Phone",
         "location": "Address",
-        "location_value": "Kirchhain, Germany",
+        "location_value": "Germany",
     },
     "de_flutter": {
         "kind": "de",
@@ -456,7 +527,7 @@ LABELS = {
         "email": "E-Mail",
         "phone": "Telefon",
         "location": "Wohnort",
-        "location_value": "Kirchhain, Deutschland",
+        "location_value": "Deutschland",
     },
     "de_general": {
         "kind": "de",
@@ -473,7 +544,7 @@ LABELS = {
         "email": "E-Mail",
         "phone": "Telefon",
         "location": "Wohnort",
-        "location_value": "Kirchhain, Deutschland",
+        "location_value": "Deutschland",
     },
 }
 
@@ -634,23 +705,22 @@ def build_pdf(key: str):
     doc.addPageTemplates([PageTemplate(id="main", frames=[frame], onPage=on_page)])
 
     photo = Image(str(PHOTO), width=26 * mm, height=26 * mm, kind="proportional")
-    contact_lines = [
-        f"<b>{esc(labels['email'])}:</b> <a href='mailto:{EMAIL}' color='#0B3A82'>{esc(EMAIL)}</a>",
-        f"<b>{esc(labels['phone'])}:</b> {esc(PHONE)}",
-        f"<b>{esc(labels['location'])}:</b> {esc(labels['location_value'])}",
-        f"<b>LinkedIn:</b> <a href='{LINKEDIN}' color='#0B3A82'>linkedin.com/in/ihebmeftah666</a>",
-        f"<b>GitHub:</b> <a href='{GITHUB}' color='#0B3A82'>github.com/ihebmeftah</a>",
-        f"<b>Portfolio:</b> <a href='{PORTFOLIO}' color='#0B3A82'>ihebportfolio.web.app</a>",
-    ]
-    left_bits = [
+    left = [
         Paragraph(esc(labels["cv_label"]).upper(), styles["kicker"]),
         Paragraph("Iheb Meftah", styles["name"]),
         Paragraph(esc(ROLES[key]), styles["role"]),
-        Spacer(1, 2),
     ]
-    for line in contact_lines:
-        left_bits.append(Paragraph(line, styles["contact"]))
-    left = left_bits
+    email_phone = Paragraph(
+        f"<b>{esc(labels['email'])}:</b> <a href='mailto:{EMAIL}' color='#0B3A82'>{esc(EMAIL)}</a>"
+        f"&nbsp;&nbsp;&nbsp;<b>{esc(labels['phone'])}:</b> {esc(PHONE)}",
+        styles["contact"],
+    )
+    links = Paragraph(
+        f"<b>LinkedIn:</b> <a href='{LINKEDIN}' color='#0B3A82'>linkedin.com/in/ihebmeftah666</a>"
+        f"&nbsp;&nbsp;<b>GitHub:</b> <a href='{GITHUB}' color='#0B3A82'>github.com/ihebmeftah</a>"
+        f"&nbsp;&nbsp;<b>Portfolio:</b> <a href='{PORTFOLIO}' color='#0B3A82'>ihebportfolio.web.app</a>",
+        styles["contact"],
+    )
     header = Table([[left, photo]], colWidths=[148 * mm, 30 * mm])
     header.setStyle(
         TableStyle(
@@ -665,7 +735,7 @@ def build_pdf(key: str):
         )
     )
 
-    story = [header]
+    story = [header, Spacer(1, 3), email_phone, links]
     story.append(section_heading(labels["profile"], styles))
     story.append(Paragraph(esc(PROFILES[key]), styles["body"]))
     story.append(section_heading(labels["experience"], styles))
@@ -695,14 +765,17 @@ def build_pdf(key: str):
 
     story.append(section_heading(labels["projects"], styles))
     for name, detail, url in PROJECTS[key]:
-        block = KeepTogether(
-            [
-                Spacer(1, 2),
-                Paragraph(f"<b>{name}</b> — {esc(detail)}", styles["body"]),
-                Paragraph(f"<a href='{url}' color='#0B3A82'>{esc(url.replace('https://', ''))}</a>", styles["meta"]),
-            ]
+        story.append(
+            KeepTogether(
+                [
+                    Spacer(1, 2),
+                    Paragraph(
+                        f"<a href='{url}' color='#0B3A82'><b>{name}</b> — {esc(detail)}</a>",
+                        styles["body"],
+                    ),
+                ]
+            )
         )
-        story.append(block)
 
     story.append(section_heading(labels["skills"], styles))
     for i, (group, items) in enumerate(SKILLS[key]):
@@ -865,12 +938,24 @@ def build_docx(key: str):
         else:
             add_text(p, value, 11)
 
-    labeled(labels["email"], EMAIL, f"mailto:{EMAIL}")
-    labeled(labels["phone"], PHONE)
-    labeled(labels["location"], labels["location_value"])
-    labeled("LinkedIn", "linkedin.com/in/ihebmeftah666", LINKEDIN)
-    labeled("GitHub", "github.com/ihebmeftah", GITHUB)
-    labeled("Portfolio", "ihebportfolio.web.app", PORTFOLIO)
+    contact = doc.add_paragraph()
+    tighten(contact, 0, 0, 1.0)
+    add_text(contact, f"{labels['email']}: ", 11, True)
+    add_hyperlink(contact, EMAIL, f"mailto:{EMAIL}", 11)
+    add_text(contact, "    ", 11)
+    add_text(contact, f"{labels['phone']}: ", 11, True)
+    add_text(contact, PHONE, 11)
+
+    links = doc.add_paragraph()
+    tighten(links, 0, 2, 1.0)
+    add_text(links, "LinkedIn: ", 11, True)
+    add_hyperlink(links, "linkedin.com/in/ihebmeftah666", LINKEDIN, 11)
+    add_text(links, "    ", 11)
+    add_text(links, "GitHub: ", 11, True)
+    add_hyperlink(links, "github.com/ihebmeftah", GITHUB, 11)
+    add_text(links, "    ", 11)
+    add_text(links, "Portfolio: ", 11, True)
+    add_hyperlink(links, "ihebportfolio.web.app", PORTFOLIO, 11)
 
     def h1(text):
         p = doc.add_heading(text, level=1)
@@ -910,14 +995,10 @@ def build_docx(key: str):
     h1(labels["projects"])
     for name, detail, url in PROJECTS[key]:
         p = doc.add_paragraph()
-        tighten(p, 6, 0)
-        add_text(p, name.replace("&amp;", "&"), 12, True)
-        p = doc.add_paragraph()
-        tighten(p, 0, 0, 1.05)
-        add_text(p, detail, 11)
-        p = doc.add_paragraph()
-        tighten(p, 0, 1)
-        add_hyperlink(p, url.replace("https://", ""), url, 11)
+        tighten(p, 6, 2, 1.05)
+        add_hyperlink(p, name.replace("&amp;", "&"), url, 12, bold=True)
+        add_text(p, " — ", 11)
+        add_hyperlink(p, detail, url, 11)
 
     h1(labels["skills"])
     for group, items in SKILLS[key]:

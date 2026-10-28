@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:websiteportfilio/core/responsive/breakpoints.dart';
 import 'package:websiteportfilio/core/theme/portfolio_colors.dart';
 import 'package:websiteportfilio/core/utils/open_external.dart';
 import 'package:websiteportfilio/features/portfolio/portfolio_content.dart';
+import 'package:websiteportfilio/features/portfolio/profile_switcher.dart';
 import 'package:websiteportfilio/l10n/app_localizations.dart';
+import 'package:websiteportfilio/providers/settings_providers.dart';
 import 'package:websiteportfilio/shared/widgets/fade_slide_in.dart';
 import 'package:websiteportfilio/shared/widgets/magnetic_surface.dart';
 import 'package:websiteportfilio/shared/widgets/page_frame.dart';
 import 'package:websiteportfilio/shared/widgets/section_intro.dart';
 
-class ContactPage extends StatelessWidget {
+class ContactPage extends ConsumerWidget {
   const ContactPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
+    final copy = profileCopyOf(l10n, ref.watch(profileFocusProvider));
     final colors = context.portfolioColors;
     final theme = Theme.of(context);
     final wide = Breakpoints.isDesktop(context);
@@ -26,12 +30,14 @@ class ContactPage extends StatelessWidget {
         FadeSlideIn(
           child: SectionIntro(
             title: l10n.sectionContact,
-            subtitle: l10n.contactIntro,
+            subtitle: copy.contactIntro,
           ),
         ),
+        const SizedBox(height: 16),
+        const ProfileSwitcher(),
         const SizedBox(height: 18),
         Text(
-          l10n.availability,
+          copy.availability,
           style: theme.textTheme.bodyLarge?.copyWith(height: 1.55),
         ),
         const SizedBox(height: 32),
@@ -45,7 +51,9 @@ class ContactPage extends StatelessWidget {
               ),
               Text(
                 language.level,
-                style: theme.textTheme.bodyMedium?.copyWith(color: colors.muted),
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: colors.muted,
+                ),
               ),
             ],
           ),
@@ -121,11 +129,7 @@ class ContactPage extends StatelessWidget {
               )
             : Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  intro,
-                  const SizedBox(height: 12),
-                  details,
-                ],
+                children: [intro, const SizedBox(height: 12), details],
               ),
       ),
     );

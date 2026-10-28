@@ -43,7 +43,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get languageLabel => 'Language';
 
   @override
-  String get heroKicker => 'Mobile team lead';
+  String get heroKicker => 'Flutter lead';
 
   @override
   String get heroName => 'Iheb Meftah';
@@ -53,7 +53,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get heroSummary =>
-      'Flutter mobile engineer and team lead in Kirchhain, Germany. Since June 2022 at EdTrust, led four Flutter applications for teachers, students, parents, and school administrators. Contract work covers inventory with offline sync and barcode scanning, an education app with the British Council, and roadside assistance with maps and live location.';
+      'Mobile developer in Germany, looking for a new position and a new way to contribute. I ship Flutter applications for iOS and Android, from the first feature through release, and I also work with Java and system design. At EdTrust I led EdTeacher, EdManager, EdStudent, and EdParent.';
+
+  @override
+  String get profileMobile => 'Mobile developer';
+
+  @override
+  String get profileSoftware => 'Software engineer';
+
+  @override
+  String get heroKickerSoftware => 'Software engineer';
+
+  @override
+  String get heroRoleSoftware => 'Software engineer';
+
+  @override
+  String get heroSummarySoftware =>
+      'Software engineer in Germany, looking for a new position and a new way to contribute on a product team. I design mobile products and the services behind them, with Java, system design, Flutter, and REST. At EdTrust I led EdTeacher, EdManager, EdStudent, and EdParent.';
 
   @override
   String get ctaWork => 'View work';
@@ -62,7 +78,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get ctaContact => 'Get in touch';
 
   @override
-  String get location => 'Kirchhain, Germany';
+  String get location => 'Germany';
 
   @override
   String get locationTitle => 'Location';
@@ -71,7 +87,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get statSinceValue => '2022';
 
   @override
-  String get statSinceLabel => 'Leading mobile delivery at EdTrust';
+  String get statSinceLabel => 'From intern to team lead at EdTrust';
 
   @override
   String get statAppsValue => '4';
@@ -83,7 +99,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get statPlaceValue => 'DE';
 
   @override
-  String get statPlaceLabel => 'Based in Kirchhain';
+  String get statPlaceLabel => 'Based in Germany';
 
   @override
   String get sectionWork => 'Work';
@@ -96,7 +112,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get workIntro =>
-      'Production mobile work, from team leadership to contract products.';
+      'Production mobile work, from the EdTrust internship to team leadership and contract products.';
+
+  @override
+  String get workIntroSoftware =>
+      'Production software work, from system design and team leadership to contract products.';
 
   @override
   String get projectsIntro =>
@@ -105,6 +125,10 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get contactIntro =>
       'Open to mobile and product engineering conversations.';
+
+  @override
+  String get contactIntroSoftware =>
+      'Open to software engineering conversations, including mobile, Java, and system design.';
 
   @override
   String get educationTitle => 'Education';
@@ -140,58 +164,88 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get availability =>
-      'Currently in Kirchhain. Happy to talk about Flutter, product architecture, and teams shipping on iOS and Android.';
+      'Currently in Germany. Happy to talk about Flutter, product architecture, Java, and teams shipping on iOS and Android.';
 
   @override
-  String get job1Title => 'Mobile Team Lead';
+  String get availabilitySoftware =>
+      'Currently in Germany. Happy to talk about system design, Java, Flutter, and teams shipping on iOS and Android.';
+
+  @override
+  String get job1Title => 'Flutter Lead (Full-time)';
 
   @override
   String get job1Org => 'EdTrust, Tunis';
 
   @override
-  String get job1Dates => 'June 2022 – Present';
+  String get job1Dates => 'July 2024 – Present';
 
   @override
   String get job1Body =>
-      'Leads the mobile team and the delivery of four Flutter applications used by teachers, students, parents, and school administrators. The work covers a scalable architecture, Firebase, CI/CD pipelines, and API integrations, from feature development through release on iOS and Android.';
+      'Full-time Flutter lead, working hybrid. Led development and deployment of EdTeacher, EdManager, EdStudent, and EdParent. These apps are used by thousands of teachers, students, administrators, and parents for school communication and monitoring. The work covers system design, a scalable architecture, Flutter, GetX, Firebase, CI/CD, and API integrations, through release on iOS and Android.';
 
   @override
-  String get job2Title => 'Mobile Developer (Contract)';
+  String get job2Title => 'Flutter Developer (Part-time)';
 
   @override
-  String get job2Org => 'Invertech';
+  String get job2Org => 'EdTrust, Tunis';
 
   @override
-  String get job2Dates => 'September 2024 – July 2026';
+  String get job2Dates => 'September 2022 – July 2024';
 
   @override
   String get job2Body =>
-      'Built an inventory application that keeps working online and offline. It scans barcodes, tracks missions in real time, and stays in sync through REST APIs, local storage, and live communication.';
+      'Part-time Flutter developer, working remotely, on the EdTrust applications. Built features, connected APIs, and supported releases on iOS and Android.';
 
   @override
-  String get job3Title => 'Mobile Developer (Contract)';
+  String get job3Title => 'Flutter Intern';
 
   @override
-  String get job3Org => 'Azombwe';
+  String get job3Org => 'EdTrust, Tunis';
 
   @override
-  String get job3Dates => 'January 2024 – June 2024';
+  String get job3Dates => 'June 2022 – August 2022';
 
   @override
   String get job3Body =>
-      'Developed an education app of interactive quizzes on African culture, together with the British Council. Designed the interface and connected it to Firebase and REST APIs.';
+      'Flutter intern on the mobile team. Contributed to the Flutter applications for teachers, students, parents, and school administrators.';
 
   @override
-  String get job4Title => 'Mobile Developer Intern';
+  String get job4Title => 'Mobile Developer (Contract)';
 
   @override
-  String get job4Org => 'Rooly';
+  String get job4Org => 'Invertech';
 
   @override
-  String get job4Dates => 'February 2023 – August 2023';
+  String get job4Dates => 'September 2024 – July 2026';
 
   @override
   String get job4Body =>
+      'Built an inventory application that keeps working online and offline. It scans barcodes, tracks missions in real time, and stays in sync through REST APIs, local storage, and live communication.';
+
+  @override
+  String get job5Title => 'Mobile Developer (Contract)';
+
+  @override
+  String get job5Org => 'Azombwe';
+
+  @override
+  String get job5Dates => 'January 2024 – June 2024';
+
+  @override
+  String get job5Body =>
+      'Developed an education app of interactive quizzes on African culture, together with the British Council. Designed the interface and connected it to Firebase and REST APIs.';
+
+  @override
+  String get job6Title => 'Mobile Developer Intern';
+
+  @override
+  String get job6Org => 'Rooly';
+
+  @override
+  String get job6Dates => 'February 2023 – August 2023';
+
+  @override
+  String get job6Body =>
       'Worked on a roadside-assistance application that connects drivers with nearby service providers. Added geolocation, maps, authentication, and the API integration that supports those interactions in real time.';
 
   @override

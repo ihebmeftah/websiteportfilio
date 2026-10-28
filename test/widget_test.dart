@@ -17,9 +17,7 @@ void main() {
     final preferences = await SharedPreferences.getInstance();
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          sharedPreferencesProvider.overrideWithValue(preferences),
-        ],
+        overrides: [sharedPreferencesProvider.overrideWithValue(preferences)],
         child: const PortfolioApp(),
       ),
     );
@@ -66,5 +64,46 @@ void main() {
     expect(find.text('Choose your language'), findsNothing);
     expect(find.text('Parcours'), findsOneWidget);
     expect(find.text('Ingénieur mobile Flutter'), findsOneWidget);
+  });
+
+  testWidgets('switches the about text to software engineer', (tester) async {
+    await pumpApp(tester, {'locale': 'en'});
+
+    expect(find.text('Flutter mobile engineer'), findsOneWidget);
+    expect(find.text('June 2022 – August 2022'), findsNothing);
+
+    await tester.tap(find.text('Work'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+
+    expect(
+      find.text('Flutter Intern', skipOffstage: false),
+      findsOneWidget,
+    );
+    expect(
+      find.text('June 2022 – August 2022', skipOffstage: false),
+      findsOneWidget,
+    );
+    expect(
+      find.text('Flutter Developer (Part-time)', skipOffstage: false),
+      findsOneWidget,
+    );
+    expect(
+      find.text(
+        'Flutter Lead (Full-time)',
+        skipOffstage: false,
+      ),
+      findsOneWidget,
+    );
+
+    await tester.tap(find.text('Software engineer'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+
+    expect(find.text('Java', skipOffstage: false), findsOneWidget);
+    expect(
+      find.textContaining('system design', skipOffstage: false),
+      findsWidgets,
+    );
   });
 }

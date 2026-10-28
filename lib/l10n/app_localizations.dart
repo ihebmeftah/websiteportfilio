@@ -169,7 +169,7 @@ abstract class AppLocalizations {
   /// No description provided for @heroKicker.
   ///
   /// In en, this message translates to:
-  /// **'Mobile team lead'**
+  /// **'Flutter lead'**
   String get heroKicker;
 
   /// No description provided for @heroName.
@@ -187,8 +187,38 @@ abstract class AppLocalizations {
   /// No description provided for @heroSummary.
   ///
   /// In en, this message translates to:
-  /// **'Flutter mobile engineer and team lead in Kirchhain, Germany. Since June 2022 at EdTrust, led four Flutter applications for teachers, students, parents, and school administrators. Contract work covers inventory with offline sync and barcode scanning, an education app with the British Council, and roadside assistance with maps and live location.'**
+  /// **'Mobile developer in Germany, looking for a new position and a new way to contribute. I ship Flutter applications for iOS and Android, from the first feature through release, and I also work with Java and system design. At EdTrust I led EdTeacher, EdManager, EdStudent, and EdParent.'**
   String get heroSummary;
+
+  /// No description provided for @profileMobile.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile developer'**
+  String get profileMobile;
+
+  /// No description provided for @profileSoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Software engineer'**
+  String get profileSoftware;
+
+  /// No description provided for @heroKickerSoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Software engineer'**
+  String get heroKickerSoftware;
+
+  /// No description provided for @heroRoleSoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Software engineer'**
+  String get heroRoleSoftware;
+
+  /// No description provided for @heroSummarySoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Software engineer in Germany, looking for a new position and a new way to contribute on a product team. I design mobile products and the services behind them, with Java, system design, Flutter, and REST. At EdTrust I led EdTeacher, EdManager, EdStudent, and EdParent.'**
+  String get heroSummarySoftware;
 
   /// No description provided for @ctaWork.
   ///
@@ -205,7 +235,7 @@ abstract class AppLocalizations {
   /// No description provided for @location.
   ///
   /// In en, this message translates to:
-  /// **'Kirchhain, Germany'**
+  /// **'Germany'**
   String get location;
 
   /// No description provided for @locationTitle.
@@ -223,7 +253,7 @@ abstract class AppLocalizations {
   /// No description provided for @statSinceLabel.
   ///
   /// In en, this message translates to:
-  /// **'Leading mobile delivery at EdTrust'**
+  /// **'From intern to team lead at EdTrust'**
   String get statSinceLabel;
 
   /// No description provided for @statAppsValue.
@@ -247,7 +277,7 @@ abstract class AppLocalizations {
   /// No description provided for @statPlaceLabel.
   ///
   /// In en, this message translates to:
-  /// **'Based in Kirchhain'**
+  /// **'Based in Germany'**
   String get statPlaceLabel;
 
   /// No description provided for @sectionWork.
@@ -271,8 +301,14 @@ abstract class AppLocalizations {
   /// No description provided for @workIntro.
   ///
   /// In en, this message translates to:
-  /// **'Production mobile work, from team leadership to contract products.'**
+  /// **'Production mobile work, from the EdTrust internship to team leadership and contract products.'**
   String get workIntro;
+
+  /// No description provided for @workIntroSoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Production software work, from system design and team leadership to contract products.'**
+  String get workIntroSoftware;
 
   /// No description provided for @projectsIntro.
   ///
@@ -285,6 +321,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Open to mobile and product engineering conversations.'**
   String get contactIntro;
+
+  /// No description provided for @contactIntroSoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Open to software engineering conversations, including mobile, Java, and system design.'**
+  String get contactIntroSoftware;
 
   /// No description provided for @educationTitle.
   ///
@@ -349,13 +391,19 @@ abstract class AppLocalizations {
   /// No description provided for @availability.
   ///
   /// In en, this message translates to:
-  /// **'Currently in Kirchhain. Happy to talk about Flutter, product architecture, and teams shipping on iOS and Android.'**
+  /// **'Currently in Germany. Happy to talk about Flutter, product architecture, Java, and teams shipping on iOS and Android.'**
   String get availability;
+
+  /// No description provided for @availabilitySoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Currently in Germany. Happy to talk about system design, Java, Flutter, and teams shipping on iOS and Android.'**
+  String get availabilitySoftware;
 
   /// No description provided for @job1Title.
   ///
   /// In en, this message translates to:
-  /// **'Mobile Team Lead'**
+  /// **'Flutter Lead (Full-time)'**
   String get job1Title;
 
   /// No description provided for @job1Org.
@@ -367,86 +415,134 @@ abstract class AppLocalizations {
   /// No description provided for @job1Dates.
   ///
   /// In en, this message translates to:
-  /// **'June 2022 – Present'**
+  /// **'July 2024 – Present'**
   String get job1Dates;
 
   /// No description provided for @job1Body.
   ///
   /// In en, this message translates to:
-  /// **'Leads the mobile team and the delivery of four Flutter applications used by teachers, students, parents, and school administrators. The work covers a scalable architecture, Firebase, CI/CD pipelines, and API integrations, from feature development through release on iOS and Android.'**
+  /// **'Full-time Flutter lead, working hybrid. Led development and deployment of EdTeacher, EdManager, EdStudent, and EdParent. These apps are used by thousands of teachers, students, administrators, and parents for school communication and monitoring. The work covers system design, a scalable architecture, Flutter, GetX, Firebase, CI/CD, and API integrations, through release on iOS and Android.'**
   String get job1Body;
 
   /// No description provided for @job2Title.
   ///
   /// In en, this message translates to:
-  /// **'Mobile Developer (Contract)'**
+  /// **'Flutter Developer (Part-time)'**
   String get job2Title;
 
   /// No description provided for @job2Org.
   ///
   /// In en, this message translates to:
-  /// **'Invertech'**
+  /// **'EdTrust, Tunis'**
   String get job2Org;
 
   /// No description provided for @job2Dates.
   ///
   /// In en, this message translates to:
-  /// **'September 2024 – July 2026'**
+  /// **'September 2022 – July 2024'**
   String get job2Dates;
 
   /// No description provided for @job2Body.
   ///
   /// In en, this message translates to:
-  /// **'Built an inventory application that keeps working online and offline. It scans barcodes, tracks missions in real time, and stays in sync through REST APIs, local storage, and live communication.'**
+  /// **'Part-time Flutter developer, working remotely, on the EdTrust applications. Built features, connected APIs, and supported releases on iOS and Android.'**
   String get job2Body;
 
   /// No description provided for @job3Title.
   ///
   /// In en, this message translates to:
-  /// **'Mobile Developer (Contract)'**
+  /// **'Flutter Intern'**
   String get job3Title;
 
   /// No description provided for @job3Org.
   ///
   /// In en, this message translates to:
-  /// **'Azombwe'**
+  /// **'EdTrust, Tunis'**
   String get job3Org;
 
   /// No description provided for @job3Dates.
   ///
   /// In en, this message translates to:
-  /// **'January 2024 – June 2024'**
+  /// **'June 2022 – August 2022'**
   String get job3Dates;
 
   /// No description provided for @job3Body.
   ///
   /// In en, this message translates to:
-  /// **'Developed an education app of interactive quizzes on African culture, together with the British Council. Designed the interface and connected it to Firebase and REST APIs.'**
+  /// **'Flutter intern on the mobile team. Contributed to the Flutter applications for teachers, students, parents, and school administrators.'**
   String get job3Body;
 
   /// No description provided for @job4Title.
   ///
   /// In en, this message translates to:
-  /// **'Mobile Developer Intern'**
+  /// **'Mobile Developer (Contract)'**
   String get job4Title;
 
   /// No description provided for @job4Org.
   ///
   /// In en, this message translates to:
-  /// **'Rooly'**
+  /// **'Invertech'**
   String get job4Org;
 
   /// No description provided for @job4Dates.
   ///
   /// In en, this message translates to:
-  /// **'February 2023 – August 2023'**
+  /// **'September 2024 – July 2026'**
   String get job4Dates;
 
   /// No description provided for @job4Body.
   ///
   /// In en, this message translates to:
-  /// **'Worked on a roadside-assistance application that connects drivers with nearby service providers. Added geolocation, maps, authentication, and the API integration that supports those interactions in real time.'**
+  /// **'Built an inventory application that keeps working online and offline. It scans barcodes, tracks missions in real time, and stays in sync through REST APIs, local storage, and live communication.'**
   String get job4Body;
+
+  /// No description provided for @job5Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Developer (Contract)'**
+  String get job5Title;
+
+  /// No description provided for @job5Org.
+  ///
+  /// In en, this message translates to:
+  /// **'Azombwe'**
+  String get job5Org;
+
+  /// No description provided for @job5Dates.
+  ///
+  /// In en, this message translates to:
+  /// **'January 2024 – June 2024'**
+  String get job5Dates;
+
+  /// No description provided for @job5Body.
+  ///
+  /// In en, this message translates to:
+  /// **'Developed an education app of interactive quizzes on African culture, together with the British Council. Designed the interface and connected it to Firebase and REST APIs.'**
+  String get job5Body;
+
+  /// No description provided for @job6Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Developer Intern'**
+  String get job6Title;
+
+  /// No description provided for @job6Org.
+  ///
+  /// In en, this message translates to:
+  /// **'Rooly'**
+  String get job6Org;
+
+  /// No description provided for @job6Dates.
+  ///
+  /// In en, this message translates to:
+  /// **'February 2023 – August 2023'**
+  String get job6Dates;
+
+  /// No description provided for @job6Body.
+  ///
+  /// In en, this message translates to:
+  /// **'Worked on a roadside-assistance application that connects drivers with nearby service providers. Added geolocation, maps, authentication, and the API integration that supports those interactions in real time.'**
+  String get job6Body;
 
   /// No description provided for @project1Title.
   ///
