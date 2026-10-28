@@ -10,6 +10,23 @@ import 'package:websiteportfilio/providers/settings_providers.dart';
 import 'package:websiteportfilio/shared/widgets/cursor_glow.dart';
 import 'package:websiteportfilio/shared/widgets/pointer_field.dart';
 
+/// Browser-tab title. The name stays first so it remains visible when the tab is narrow.
+String portfolioTabTitle(AppLocalizations l10n, String path) {
+  final section = switch (path) {
+    '/' => null,
+    _ when path.startsWith('/work') => l10n.navWork,
+    _ when path.startsWith('/stack') => l10n.navStack,
+    _ when path.startsWith('/projects') => l10n.navProjects,
+    _ when path.startsWith('/contact') => l10n.navContact,
+    _ => null,
+  };
+  final name = l10n.appTitle;
+  if (section == null) {
+    return '$name — Portfolio';
+  }
+  return '$name — $section';
+}
+
 class PortfolioShell extends ConsumerWidget {
   const PortfolioShell({required this.child, super.key});
 
@@ -30,68 +47,72 @@ class PortfolioShell extends ConsumerWidget {
       (path: '/contact', label: l10n.navContact),
     ];
 
-    return Scaffold(
-      backgroundColor: colors.canvas,
-      drawer: wide
-          ? null
-          : Drawer(
-              backgroundColor: colors.card,
-              child: SafeArea(
-                child: ListView(
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
-                      child: Text(
-                        l10n.appTitle,
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      ),
-                    ),
-                    for (final destination in destinations)
-                      ListTile(
-                        title: Text(destination.label),
-                        selected: _selected(path, destination.path),
-                        selectedTileColor: colors.accentSoft,
-                        onTap: () {
-                          Navigator.of(context).pop();
-                          context.go(destination.path);
-                        },
-                      ),
-                    const Divider(),
-                    ListTile(
-                      leading: const Icon(Icons.language),
-                      title: Text(l10n.languageLabel),
-                      subtitle: Text(
-                        PortfolioLanguages.name(
-                          ref.watch(localeProvider)?.languageCode,
+    return Title(
+      title: portfolioTabTitle(l10n, path),
+      color: colors.ink,
+      child: Scaffold(
+        backgroundColor: colors.canvas,
+        drawer: wide
+            ? null
+            : Drawer(
+                backgroundColor: colors.card,
+                child: SafeArea(
+                  child: ListView(
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
+                        child: Text(
+                          l10n.appTitle,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                       ),
-                      onTap: () {
-                        Navigator.of(context).pop();
-                        ref.read(languagePromptProvider.notifier).open();
-                      },
-                    ),
-                  ],
+                      for (final destination in destinations)
+                        ListTile(
+                          title: Text(destination.label),
+                          selected: _selected(path, destination.path),
+                          selectedTileColor: colors.accentSoft,
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            context.go(destination.path);
+                          },
+                        ),
+                      const Divider(),
+                      ListTile(
+                        leading: const Icon(Icons.language),
+                        title: Text(l10n.languageLabel),
+                        subtitle: Text(
+                          PortfolioLanguages.name(
+                            ref.watch(localeProvider)?.languageCode,
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.of(context).pop();
+                          ref.read(languagePromptProvider.notifier).open();
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-      body: PointerField(
-        child: Stack(
-          children: [
-            const Positioned.fill(child: _Atmosphere()),
-            const Positioned.fill(child: CursorGlow()),
-            const Positioned.fill(child: GrainOverlay()),
-            Column(
-              children: [
-                _TopBar(
-                  wide: wide,
-                  destinations: destinations,
-                  currentPath: path,
-                ),
-                Expanded(child: child),
-              ],
-            ),
-          ],
+        body: PointerField(
+          child: Stack(
+            children: [
+              const Positioned.fill(child: _Atmosphere()),
+              const Positioned.fill(child: CursorGlow()),
+              const Positioned.fill(child: GrainOverlay()),
+              Column(
+                children: [
+                  _TopBar(
+                    wide: wide,
+                    destinations: destinations,
+                    currentPath: path,
+                  ),
+                  Expanded(child: child),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:websiteportfilio/core/router/app_routes.dart';
 import 'package:websiteportfilio/core/theme/app_theme.dart';
 import 'package:websiteportfilio/features/shell/language_gate.dart';
+import 'package:websiteportfilio/features/shell/portfolio_shell.dart';
 import 'package:websiteportfilio/l10n/app_localizations.dart';
 import 'package:websiteportfilio/providers/settings_providers.dart';
 
@@ -24,7 +25,8 @@ class PortfolioApp extends ConsumerWidget {
     final askLanguage = ref.watch(languagePromptProvider);
 
     return MaterialApp.router(
-      onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
+      onGenerateTitle: (context) =>
+          portfolioTabTitle(AppLocalizations.of(context), '/'),
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
