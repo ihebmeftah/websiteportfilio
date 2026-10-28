@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:websiteportfilio/features/footer/site_footer.dart';
 import 'package:websiteportfilio/features/portfolio/portfolio_content.dart';
 import 'package:websiteportfilio/features/projects/project_card.dart';
 import 'package:websiteportfilio/l10n/app_localizations.dart';
@@ -48,6 +49,7 @@ class ProjectsPage extends StatelessWidget {
                 );
               },
             ),
+            const SiteFooter(),
           ],
         ),
       ),

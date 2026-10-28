@@ -5,13 +5,14 @@ import 'package:websiteportfilio/core/responsive/breakpoints.dart';
 import 'package:websiteportfilio/core/theme/portfolio_colors.dart';
 import 'package:websiteportfilio/features/portfolio/portfolio_content.dart';
 import 'package:websiteportfilio/features/portfolio/profile_switcher.dart';
+import 'package:websiteportfilio/features/footer/site_footer.dart';
 import 'package:websiteportfilio/features/projects/project_card.dart';
+import 'package:websiteportfilio/features/stack/tech_preview.dart';
 import 'package:websiteportfilio/l10n/app_localizations.dart';
 import 'package:websiteportfilio/providers/settings_providers.dart';
 import 'package:websiteportfilio/shared/widgets/fade_slide_in.dart';
 import 'package:websiteportfilio/shared/widgets/magnetic_surface.dart';
 import 'package:websiteportfilio/shared/widgets/page_frame.dart';
-import 'package:websiteportfilio/shared/widgets/skill_wrap.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -134,17 +135,12 @@ class HomePage extends ConsumerWidget {
               const SizedBox(height: 28),
               portrait,
             ],
-            const SizedBox(height: 36),
-            FadeSlideIn(
-              delay: const Duration(milliseconds: 380),
-              child: Text(l10n.skillsTitle, style: theme.textTheme.titleLarge),
-            ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 56),
             const FadeSlideIn(
-              delay: Duration(milliseconds: 420),
-              child: SkillWrap(),
+              delay: Duration(milliseconds: 380),
+              child: TechPreview(),
             ),
-            const SizedBox(height: 52),
+            const SizedBox(height: 56),
             FadeSlideIn(
               delay: const Duration(milliseconds: 460),
               child: Text(
@@ -178,6 +174,7 @@ class HomePage extends ConsumerWidget {
               '${l10n.heroName}  ·  ${l10n.location}',
               style: theme.textTheme.bodyMedium?.copyWith(color: colors.muted),
             ),
+            const SiteFooter(),
           ],
         ),
       ),

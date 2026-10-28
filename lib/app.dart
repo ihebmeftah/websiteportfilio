@@ -35,12 +35,7 @@ class PortfolioApp extends ConsumerWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       routerConfig: router,
       builder: (context, child) {
-        return Stack(
-          children: [
-            if (child != null) child,
-            if (askLanguage) const LanguageGate(),
-          ],
-        );
+        return Stack(children: [?child, if (askLanguage) const LanguageGate()]);
       },
     );
   }

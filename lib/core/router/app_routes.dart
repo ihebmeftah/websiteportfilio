@@ -4,6 +4,7 @@ import 'package:websiteportfilio/features/contact/contact_page.dart';
 import 'package:websiteportfilio/features/home/home_page.dart';
 import 'package:websiteportfilio/features/projects/projects_page.dart';
 import 'package:websiteportfilio/features/shell/portfolio_shell.dart';
+import 'package:websiteportfilio/features/stack/stack_page.dart';
 import 'package:websiteportfilio/features/work/work_page.dart';
 
 part 'app_routes.g.dart';
@@ -40,6 +41,7 @@ CustomTransitionPage<void> _fadePage({
   routes: <TypedRoute<RouteData>>[
     TypedGoRoute<HomeRoute>(path: '/'),
     TypedGoRoute<WorkRoute>(path: '/work'),
+    TypedGoRoute<StackRoute>(path: '/stack'),
     TypedGoRoute<ProjectsRoute>(path: '/projects'),
     TypedGoRoute<ContactRoute>(path: '/contact'),
   ],
@@ -68,6 +70,20 @@ class WorkRoute extends GoRouteData with $WorkRoute {
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) {
     return _fadePage(state: state, child: const WorkPage());
+  }
+}
+
+class StackRoute extends GoRouteData with $StackRoute {
+  const StackRoute({this.focus});
+
+  final String? focus;
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) {
+    return _fadePage(
+      state: state,
+      child: StackPage(focus: focus),
+    );
   }
 }
 

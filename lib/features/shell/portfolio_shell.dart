@@ -25,6 +25,7 @@ class PortfolioShell extends ConsumerWidget {
     final destinations = [
       (path: '/', label: l10n.navHome),
       (path: '/work', label: l10n.navWork),
+      (path: '/stack', label: l10n.navStack),
       (path: '/projects', label: l10n.navProjects),
       (path: '/contact', label: l10n.navContact),
     ];
@@ -251,10 +252,8 @@ class _Mark extends StatelessWidget {
           const SizedBox(width: 10),
           Text(
             label,
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.w700,
-              color: colors.ink,
-            ),
+            style: Theme.of(context).textTheme.titleMedium
+                ?.copyWith(fontWeight: FontWeight.w700, color: colors.ink),
           ),
         ],
       ),

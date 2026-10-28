@@ -31,6 +31,16 @@ void main() {
     expect(find.text('Iheb Meftah'), findsWidgets);
     expect(find.text('Work'), findsOneWidget);
     expect(find.text('Flutter mobile engineer'), findsOneWidget);
+    expect(find.text('Technologies'), findsOneWidget);
+    expect(find.textContaining('go_router'), findsOneWidget);
+    expect(find.textContaining('Multi-tenant'), findsOneWidget);
+    expect(find.textContaining('Express.js'), findsOneWidget);
+    expect(find.textContaining('Spring Boot'), findsOneWidget);
+    expect(find.text('Download CV'), findsOneWidget);
+    expect(find.text('English'), findsOneWidget);
+    expect(find.text('Deutsch'), findsOneWidget);
+    expect(find.text('I designed and built this website.'), findsOneWidget);
+    expect(find.text('github.com/ihebmeftah/websiteportfilio'), findsOneWidget);
   });
 
   testWidgets('shows the German navigation', (tester) async {
@@ -39,6 +49,22 @@ void main() {
     expect(find.text('Werdegang'), findsOneWidget);
     expect(find.text('Projekte'), findsOneWidget);
     expect(find.text('Kontakt'), findsOneWidget);
+  });
+
+  testWidgets('opens the technologies page', (tester) async {
+    await pumpApp(tester, {'locale': 'en'});
+
+    await tester.tap(find.text('Stack'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+
+    expect(find.text('go_router'), findsOneWidget);
+    expect(find.text('GetX'), findsWidgets);
+    expect(find.text('Multi-tenant'), findsOneWidget);
+    expect(find.text('PostgreSQL'), findsOneWidget);
+    expect(find.text('SwiftUI'), findsOneWidget);
+    expect(find.text('React'), findsOneWidget);
+    expect(find.text('Crashlytics'), findsOneWidget);
   });
 
   testWidgets('opens the projects page', (tester) async {
@@ -76,10 +102,7 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 500));
 
-    expect(
-      find.text('Flutter Intern', skipOffstage: false),
-      findsOneWidget,
-    );
+    expect(find.text('Flutter Intern', skipOffstage: false), findsOneWidget);
     expect(
       find.text('June 2022 – August 2022', skipOffstage: false),
       findsOneWidget,
@@ -89,10 +112,7 @@ void main() {
       findsOneWidget,
     );
     expect(
-      find.text(
-        'Flutter Lead (Full-time)',
-        skipOffstage: false,
-      ),
+      find.text('Flutter Lead (Full-time)', skipOffstage: false),
       findsOneWidget,
     );
 

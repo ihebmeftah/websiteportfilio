@@ -118,6 +118,12 @@ abstract class AppLocalizations {
   /// **'Work'**
   String get navWork;
 
+  /// No description provided for @navStack.
+  ///
+  /// In en, this message translates to:
+  /// **'Stack'**
+  String get navStack;
+
   /// No description provided for @navProjects.
   ///
   /// In en, this message translates to:
@@ -645,6 +651,408 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'View project'**
   String get viewProject;
+
+  /// No description provided for @sectionStack.
+  ///
+  /// In en, this message translates to:
+  /// **'Technologies'**
+  String get sectionStack;
+
+  /// No description provided for @stackIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'The tools I use to design a product, ship it, and run the service behind it.'**
+  String get stackIntro;
+
+  /// No description provided for @stackOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'See the stack'**
+  String get stackOpen;
+
+  /// No description provided for @stackFamilyCta.
+  ///
+  /// In en, this message translates to:
+  /// **'Open'**
+  String get stackFamilyCta;
+
+  /// No description provided for @stackWhere.
+  ///
+  /// In en, this message translates to:
+  /// **'Where it shows up'**
+  String get stackWhere;
+
+  /// No description provided for @stackFlutterTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter'**
+  String get stackFlutterTitle;
+
+  /// No description provided for @stackFlutterLine.
+  ///
+  /// In en, this message translates to:
+  /// **'iOS and Android, from the first feature through the store release.'**
+  String get stackFlutterLine;
+
+  /// No description provided for @stackFlutterProof.
+  ///
+  /// In en, this message translates to:
+  /// **'At EdTrust I led EdTeacher, EdManager, EdStudent, and EdParent, used by thousands of teachers, students, administrators, and parents. Those apps run on GetX. Around that I use BLoC and Cubit when a feature wants an explicit state model, Riverpod for scoped state, and go_router, Dio, and Retrofit when navigation and API clients should stay typed.'**
+  String get stackFlutterProof;
+
+  /// No description provided for @stackNestTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'NestJS'**
+  String get stackNestTitle;
+
+  /// No description provided for @stackNestLine.
+  ///
+  /// In en, this message translates to:
+  /// **'Services for more than one organization, with GraphQL, REST, and a database that fits the data.'**
+  String get stackNestLine;
+
+  /// No description provided for @stackNestProof.
+  ///
+  /// In en, this message translates to:
+  /// **'I reach for NestJS when a mobile app needs a real service. Multi-tenant isolation lets more than one organization share a deployment. GraphQL fits when the client should ask for specific fields, and REST fits when a resource API is the clearer contract. PostgreSQL or MongoDB sits behind that, depending on the model. The public GraphQL service is one example.'**
+  String get stackNestProof;
+
+  /// No description provided for @stackAlsoTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Also shipping'**
+  String get stackAlsoTitle;
+
+  /// No description provided for @stackAlsoLine.
+  ///
+  /// In en, this message translates to:
+  /// **'Languages, design, and the path from a branch to the stores.'**
+  String get stackAlsoLine;
+
+  /// No description provided for @stackAlsoProof.
+  ///
+  /// In en, this message translates to:
+  /// **'Java and system design sit next to the mobile work. CI/CD carries a build through to the App Store and Play Store. The movies project ships as both a SwiftUI client and an Ionic client.'**
+  String get stackAlsoProof;
+
+  /// No description provided for @techCatProduct.
+  ///
+  /// In en, this message translates to:
+  /// **'Product'**
+  String get techCatProduct;
+
+  /// No description provided for @techCatLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get techCatLanguage;
+
+  /// No description provided for @techCatNavigation.
+  ///
+  /// In en, this message translates to:
+  /// **'Navigation'**
+  String get techCatNavigation;
+
+  /// No description provided for @techCatNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'Networking'**
+  String get techCatNetwork;
+
+  /// No description provided for @techCatState.
+  ///
+  /// In en, this message translates to:
+  /// **'State'**
+  String get techCatState;
+
+  /// No description provided for @techCatPlatform.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform'**
+  String get techCatPlatform;
+
+  /// No description provided for @techCatBackend.
+  ///
+  /// In en, this message translates to:
+  /// **'Backend'**
+  String get techCatBackend;
+
+  /// No description provided for @techCatFramework.
+  ///
+  /// In en, this message translates to:
+  /// **'Framework'**
+  String get techCatFramework;
+
+  /// No description provided for @techCatArchitecture.
+  ///
+  /// In en, this message translates to:
+  /// **'Architecture'**
+  String get techCatArchitecture;
+
+  /// No description provided for @techCatApi.
+  ///
+  /// In en, this message translates to:
+  /// **'API'**
+  String get techCatApi;
+
+  /// No description provided for @techCatData.
+  ///
+  /// In en, this message translates to:
+  /// **'Data'**
+  String get techCatData;
+
+  /// No description provided for @techCatDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery'**
+  String get techCatDelivery;
+
+  /// No description provided for @techCatClient.
+  ///
+  /// In en, this message translates to:
+  /// **'Client'**
+  String get techCatClient;
+
+  /// No description provided for @techCatRelease.
+  ///
+  /// In en, this message translates to:
+  /// **'Release'**
+  String get techCatRelease;
+
+  /// No description provided for @techFlutterDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Interfaces for iOS, Android, and web'**
+  String get techFlutterDetail;
+
+  /// No description provided for @techDartDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'The language on the client, and on Serverpod'**
+  String get techDartDetail;
+
+  /// No description provided for @techGoRouterDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Typed routes, guards, and deep links'**
+  String get techGoRouterDetail;
+
+  /// No description provided for @techDioDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'HTTP with interceptors, timeouts, and retries'**
+  String get techDioDetail;
+
+  /// No description provided for @techRetrofitDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Generated clients from the API contract'**
+  String get techRetrofitDetail;
+
+  /// No description provided for @techGetxDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'State, injection, and navigation on the EdTrust apps'**
+  String get techGetxDetail;
+
+  /// No description provided for @techBlocDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Events and states for larger features'**
+  String get techBlocDetail;
+
+  /// No description provided for @techCubitDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'The same model, without event classes'**
+  String get techCubitDetail;
+
+  /// No description provided for @techRiverpodDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Scoped providers. This site runs on it'**
+  String get techRiverpodDetail;
+
+  /// No description provided for @techFirebaseDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Auth, data, and the release path'**
+  String get techFirebaseDetail;
+
+  /// No description provided for @techServerpodDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Dart backend for live orders and inventory'**
+  String get techServerpodDetail;
+
+  /// No description provided for @techNestDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Modules, injection, and a clear server boundary'**
+  String get techNestDetail;
+
+  /// No description provided for @techTypescriptDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Typed contracts from the service to the client'**
+  String get techTypescriptDetail;
+
+  /// No description provided for @techTenantDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'One deployment, isolated data per organization'**
+  String get techTenantDetail;
+
+  /// No description provided for @techGraphqlDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Schema-first APIs the client can query precisely'**
+  String get techGraphqlDetail;
+
+  /// No description provided for @techRestDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Resource APIs the Flutter apps already call'**
+  String get techRestDetail;
+
+  /// No description provided for @techPostgresDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Relational data when the model is strict'**
+  String get techPostgresDetail;
+
+  /// No description provided for @techMongoDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Documents when the shape needs to move'**
+  String get techMongoDetail;
+
+  /// No description provided for @techJavaDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Systems work alongside the mobile products'**
+  String get techJavaDetail;
+
+  /// No description provided for @techDesignDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Architecture for apps a whole school uses'**
+  String get techDesignDetail;
+
+  /// No description provided for @techCicdDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Pipelines from the branch to the stores'**
+  String get techCicdDetail;
+
+  /// No description provided for @techGitDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'History, review, and the release branch'**
+  String get techGitDetail;
+
+  /// No description provided for @techSwiftDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Native iOS client for the movies project'**
+  String get techSwiftDetail;
+
+  /// No description provided for @techIonicDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'TypeScript client beside that same product'**
+  String get techIonicDetail;
+
+  /// No description provided for @techAndroidDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Play Store releases'**
+  String get techAndroidDetail;
+
+  /// No description provided for @techIosDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'App Store releases'**
+  String get techIosDetail;
+
+  /// No description provided for @techAnalyticsDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'How the shipped apps are actually used'**
+  String get techAnalyticsDetail;
+
+  /// No description provided for @techCrashDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Crashes from devices, tied to a release'**
+  String get techCrashDetail;
+
+  /// No description provided for @techDistributeDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Test builds before the store release'**
+  String get techDistributeDetail;
+
+  /// No description provided for @techMessagingDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Push messages to installed apps'**
+  String get techMessagingDetail;
+
+  /// No description provided for @techSpringDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Java services with Spring Boot'**
+  String get techSpringDetail;
+
+  /// No description provided for @techExpressDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Node.js APIs beside the NestJS services'**
+  String get techExpressDetail;
+
+  /// No description provided for @techReactDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Component interfaces for the web'**
+  String get techReactDetail;
+
+  /// No description provided for @techAngularDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Structured applications in the browser'**
+  String get techAngularDetail;
+
+  /// No description provided for @footerCvTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Download CV'**
+  String get footerCvTitle;
+
+  /// No description provided for @footerCvBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose English or German. The PDF matches the selected profile: {profile}.'**
+  String footerCvBody(String profile);
+
+  /// No description provided for @footerCvEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get footerCvEnglish;
+
+  /// No description provided for @footerCvGerman.
+  ///
+  /// In en, this message translates to:
+  /// **'Deutsch'**
+  String get footerCvGerman;
+
+  /// No description provided for @footerBuilt.
+  ///
+  /// In en, this message translates to:
+  /// **'I designed and built this website.'**
+  String get footerBuilt;
 }
 
 class _AppLocalizationsDelegate

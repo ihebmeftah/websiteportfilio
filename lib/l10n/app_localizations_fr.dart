@@ -19,6 +19,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get navWork => 'Parcours';
 
   @override
+  String get navStack => 'Stack';
+
+  @override
   String get navProjects => 'Projets';
 
   @override
@@ -301,4 +304,227 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get viewProject => 'Voir le projet';
+
+  @override
+  String get sectionStack => 'Technologies';
+
+  @override
+  String get stackIntro =>
+      'Les outils avec lesquels je conçois un produit, le livre, et fais tourner le service derrière.';
+
+  @override
+  String get stackOpen => 'Voir le stack';
+
+  @override
+  String get stackFamilyCta => 'Ouvrir';
+
+  @override
+  String get stackWhere => 'Où ça se voit';
+
+  @override
+  String get stackFlutterTitle => 'Flutter';
+
+  @override
+  String get stackFlutterLine =>
+      'iOS et Android, de la première fonction jusqu\'à la publication.';
+
+  @override
+  String get stackFlutterProof =>
+      'Chez EdTrust, j\'ai dirigé EdTeacher, EdManager, EdStudent et EdParent, utilisés par des milliers d\'enseignants, d\'élèves, d\'administrateurs et de parents. Ces applications tournent avec GetX. Autour de ça, j\'utilise BLoC et Cubit quand une fonction demande un modèle d\'état explicite, Riverpod pour un état ciblé, et go_router, Dio et Retrofit quand la navigation et les clients d\'API doivent rester typés.';
+
+  @override
+  String get stackNestTitle => 'NestJS';
+
+  @override
+  String get stackNestLine =>
+      'Des services pour plusieurs organisations, avec GraphQL, REST et la base qui correspond aux données.';
+
+  @override
+  String get stackNestProof =>
+      'J\'utilise NestJS quand une application mobile a besoin d\'un vrai service. L\'isolation multi-tenant permet à plusieurs organisations de partager un déploiement. GraphQL convient quand le client doit demander des champs précis, et REST quand une API de ressources est le contrat le plus clair. PostgreSQL ou MongoDB se place derrière, selon le modèle. Le service GraphQL public en est un exemple.';
+
+  @override
+  String get stackAlsoTitle => 'Aussi en production';
+
+  @override
+  String get stackAlsoLine =>
+      'Langages, conception, et le chemin d\'une branche jusqu\'aux stores.';
+
+  @override
+  String get stackAlsoProof =>
+      'Java et la conception de systèmes accompagnent le travail mobile. Le CI/CD mène un build jusqu\'à l\'App Store et au Play Store. Le projet films existe en client SwiftUI et en client Ionic.';
+
+  @override
+  String get techCatProduct => 'Produit';
+
+  @override
+  String get techCatLanguage => 'Langage';
+
+  @override
+  String get techCatNavigation => 'Navigation';
+
+  @override
+  String get techCatNetwork => 'Réseau';
+
+  @override
+  String get techCatState => 'État';
+
+  @override
+  String get techCatPlatform => 'Plateforme';
+
+  @override
+  String get techCatBackend => 'Backend';
+
+  @override
+  String get techCatFramework => 'Framework';
+
+  @override
+  String get techCatArchitecture => 'Architecture';
+
+  @override
+  String get techCatApi => 'API';
+
+  @override
+  String get techCatData => 'Données';
+
+  @override
+  String get techCatDelivery => 'Livraison';
+
+  @override
+  String get techCatClient => 'Client';
+
+  @override
+  String get techCatRelease => 'Publication';
+
+  @override
+  String get techFlutterDetail => 'Interfaces pour iOS, Android et le web';
+
+  @override
+  String get techDartDetail => 'Le langage du client, et de Serverpod';
+
+  @override
+  String get techGoRouterDetail => 'Routes typées, guards et liens profonds';
+
+  @override
+  String get techDioDetail => 'HTTP avec intercepteurs, délais et relances';
+
+  @override
+  String get techRetrofitDetail => 'Clients générés à partir du contrat d\'API';
+
+  @override
+  String get techGetxDetail =>
+      'État, injection et navigation sur les apps EdTrust';
+
+  @override
+  String get techBlocDetail =>
+      'Événements et états pour les fonctions plus larges';
+
+  @override
+  String get techCubitDetail => 'Le même modèle, sans classes d\'événements';
+
+  @override
+  String get techRiverpodDetail => 'Providers ciblés. Ce site tourne avec';
+
+  @override
+  String get techFirebaseDetail => 'Auth, données et le chemin de publication';
+
+  @override
+  String get techServerpodDetail =>
+      'Backend Dart pour commandes et stocks en direct';
+
+  @override
+  String get techNestDetail =>
+      'Modules, injection et une frontière de service claire';
+
+  @override
+  String get techTypescriptDetail =>
+      'Contrats typés du service jusqu\'au client';
+
+  @override
+  String get techTenantDetail =>
+      'Un déploiement, des données isolées par organisation';
+
+  @override
+  String get techGraphqlDetail =>
+      'APIs orientées schéma, que le client interroge précisément';
+
+  @override
+  String get techRestDetail =>
+      'APIs de ressources que les apps Flutter appellent déjà';
+
+  @override
+  String get techPostgresDetail =>
+      'Données relationnelles quand le modèle est strict';
+
+  @override
+  String get techMongoDetail => 'Documents quand la forme doit rester souple';
+
+  @override
+  String get techJavaDetail => 'Travail système à côté des produits mobiles';
+
+  @override
+  String get techDesignDetail =>
+      'Architecture pour des apps qu\'une école entière utilise';
+
+  @override
+  String get techCicdDetail => 'Pipelines de la branche jusqu\'aux stores';
+
+  @override
+  String get techGitDetail => 'Historique, revue et branche de publication';
+
+  @override
+  String get techSwiftDetail => 'Client iOS natif pour le projet films';
+
+  @override
+  String get techIonicDetail =>
+      'Client TypeScript pour la même idée de produit';
+
+  @override
+  String get techAndroidDetail => 'Publications sur le Play Store';
+
+  @override
+  String get techIosDetail => 'Publications sur l\'App Store';
+
+  @override
+  String get techAnalyticsDetail =>
+      'Comment les applications publiées sont vraiment utilisées';
+
+  @override
+  String get techCrashDetail => 'Plantages des appareils, reliés à une version';
+
+  @override
+  String get techDistributeDetail => 'Builds de test avant la publication';
+
+  @override
+  String get techMessagingDetail =>
+      'Messages push vers les applications installées';
+
+  @override
+  String get techSpringDetail => 'Services Java avec Spring Boot';
+
+  @override
+  String get techExpressDetail => 'APIs Node.js à côté des services NestJS';
+
+  @override
+  String get techReactDetail => 'Interfaces à composants pour le web';
+
+  @override
+  String get techAngularDetail => 'Applications structurées dans le navigateur';
+
+  @override
+  String get footerCvTitle => 'Télécharger le CV';
+
+  @override
+  String footerCvBody(String profile) {
+    return 'Choisissez l\'anglais ou l\'allemand. Le PDF suit le profil choisi : $profile.';
+  }
+
+  @override
+  String get footerCvEnglish => 'English';
+
+  @override
+  String get footerCvGerman => 'Deutsch';
+
+  @override
+  String get footerBuilt => 'J\'ai conçu et développé ce site.';
 }

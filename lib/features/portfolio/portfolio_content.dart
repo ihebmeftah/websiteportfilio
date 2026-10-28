@@ -48,6 +48,8 @@ abstract final class PortfolioLinks {
   static const phoneText = '+49 155 11063642';
   static const linkedin = 'https://www.linkedin.com/in/ihebmeftah666/';
   static const github = 'https://github.com/ihebmeftah';
+  static const repository = 'https://github.com/ihebmeftah/websiteportfilio';
+  static const repositoryLabel = 'github.com/ihebmeftah/websiteportfilio';
   static const mobileSkills = [
     'Flutter',
     'Dart',
@@ -57,17 +59,25 @@ abstract final class PortfolioLinks {
     'Serverpod',
     'REST',
     'NestJS',
+    'Express',
+    'React',
+    'Angular',
     'PostgreSQL',
     'Java',
+    'Spring Boot',
     'System design',
     'CI/CD',
   ];
 
   static const softwareSkills = [
     'Java',
+    'Spring Boot',
     'System design',
     'Architecture',
     'TypeScript',
+    'React',
+    'Angular',
+    'Express',
     'Dart',
     'Flutter',
     'NestJS',

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:websiteportfilio/core/responsive/breakpoints.dart';
 import 'package:websiteportfilio/core/theme/portfolio_colors.dart';
 import 'package:websiteportfilio/core/utils/open_external.dart';
+import 'package:websiteportfilio/features/footer/site_footer.dart';
 import 'package:websiteportfilio/features/portfolio/portfolio_content.dart';
 import 'package:websiteportfilio/features/portfolio/profile_switcher.dart';
 import 'package:websiteportfilio/l10n/app_localizations.dart';
@@ -116,21 +117,26 @@ class ContactPage extends ConsumerWidget {
       ],
     );
 
+    final body = wide
+        ? Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(child: intro),
+              const SizedBox(width: 36),
+              Expanded(child: details),
+            ],
+          )
+        : Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [intro, const SizedBox(height: 12), details],
+          );
+
     return SingleChildScrollView(
       child: PageFrame(
-        child: wide
-            ? Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(child: intro),
-                  const SizedBox(width: 36),
-                  Expanded(child: details),
-                ],
-              )
-            : Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [intro, const SizedBox(height: 12), details],
-              ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [body, const SiteFooter()],
+        ),
       ),
     );
   }

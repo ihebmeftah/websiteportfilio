@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:websiteportfilio/core/theme/portfolio_colors.dart';
+import 'package:websiteportfilio/features/footer/site_footer.dart';
 import 'package:websiteportfilio/features/portfolio/portfolio_content.dart';
 import 'package:websiteportfilio/features/portfolio/profile_switcher.dart';
 import 'package:websiteportfilio/l10n/app_localizations.dart';
@@ -90,6 +92,12 @@ class WorkPage extends ConsumerWidget {
             Text(l10n.skillsTitle, style: theme.textTheme.titleLarge),
             const SizedBox(height: 14),
             const SkillWrap(),
+            const SizedBox(height: 18),
+            OutlinedButton(
+              onPressed: () => context.go('/stack'),
+              child: Text(l10n.stackOpen),
+            ),
+            const SiteFooter(),
           ],
         ),
       ),
